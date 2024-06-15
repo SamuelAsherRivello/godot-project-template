@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://7qxyxw62myvy"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Common" type="Node3D" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Common"]
+transform = Transform3D(0.816454, -0.255035, -0.518034, 0.574763, 0.273147, 0.771387, -0.0552308, -0.927549, 0.369597, -6.01462, 3.40027, 4.93036)
+
+[node name="Camera3D" type="Camera3D" parent="Common"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
+fov = 30.0
+
+[node name="Cube" type="CSGBox3D" parent="."]
+transform = Transform3D(0.761659, 0.158901, 0.628193, 0.238709, 0.832477, -0.5, -0.602406, 0.530785, 0.596133, 0, 0, 0)
