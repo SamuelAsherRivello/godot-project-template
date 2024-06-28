@@ -2,33 +2,63 @@
 
 This repo includes best practices for project structure and C# coding standards for the **Godot Engine**.
 
-<img width="400" src="./Godot/Documentation/Images/Banner.png" alt="Best Practices">
+<img width="600" src="./Godot/Documentation/Images/Banner.png" alt="Best Practices">
 
 <BR>
 
-**Getting Started**
+**Highlights**
+
+* **Does NOT require** any autoload, interface, nor baseclass. 
+* **Compatible with** nodes, resources, and classes.
+* **Compatible with** GDScript, C#, and C++
+
+<BR>
+<BR>
+
+# Table of Contents
+
+1. [Getting Started](#getting-started)
+1. [Features](#features)
+1. [Videos](#videos)
+1. [Resources](#resources)
+1. [Credits](#credits)
+
+
+<BR>
+<BR>
+
+## Getting Started
 1. Download this repo (*.zip or *.git)
 1. Download the [Godot Engine](https://godotengine.org/)
 1. Open the Godot Engine Editor
 1. **Import** the `Godot` folder from this repo
 1. Enjoy!
 
-<BR>
 
-# Table of Contents
-
-1. [Videos](#videos)
-1. [Features](#features)
-1. [Resources](#resources)
-1. [Credits](#credits)
 
 <BR>
-
----
-
 <BR>
 
-### Videos
+
+## Features
+
+<img width = "600" src="./Godot/Documentation/Images/Screenshot.png" />
+
+This project is a living template. It showcases the best practices and coding standards for many common workflows.
+
+**Includes...**
+
+* Git Repo - Folder structure, .gitignore, ReadMe.md
+* Godot Project - Folder structure
+* Scene Window - Node structure
+* Runtime Scripting
+* Editor Scripting 
+* Unit Scripting 
+
+<BR>
+<BR>
+
+## Videos
 
 This **Godot Project** is featured in the following YouTube video playlist.
 
@@ -44,45 +74,19 @@ This **Godot Project** is featured in the following YouTube video playlist.
 </table>
 
 <BR>
-
----
-
 <BR>
 
 
-### Features
 
-<img width = "400" src="./Godot/Documentation/Images/Screenshot.png" />
-
-This project is a living template. It showcases the best practices and coding standards for many common workflows.
-
-**Includes...**
-
-* Git Repo - Folder structure, .gitignore, ReadMe.md
-* Godot Project - Folder structure
-* Scene Window - Node structure
-* Runtime Scripting
-* Editor Scripting 
-* Unit Scripting 
-
-<BR>
-
----
-
-<BR>
-
-### Resources
+## Resources
 
 * Samuel Asher Rivello's Medium Article - <a href="https://sam-16930.medium.com/unity-project-structure-a694792cefed">Unity — Project Structure Best Practices</a>
 * Samuel Asher Rivello's Medium Article - <a href="https://sam-16930.medium.com/coding-standards-in-c-39aefee92db8">Unity — C# Coding Standards</a>
 
 <BR>
-
----
-
 <BR>
 
-### Credits
+## Credits
 
 **Creator**
 
