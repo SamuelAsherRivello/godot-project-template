@@ -2,6 +2,8 @@
 
 This repo includes best practices for project structure and C# coding standards for the **Godot Engine**.
 
+This is the ideal starting point for new Godot game projects.
+
 <img width="600" src="./Godot/Documentation/Images/Banner.png" alt="Best Practices">
 
 <BR>
@@ -78,9 +80,9 @@ This **Godot Project** is featured in the following YouTube video playlist.
 
 ## Resources
 
-* Samuel Asher Rivello's Godot Portfolio - <a href="http://www.samuelasherrivello.com/best-practices">Godot — Articles, Repos, Tips</a>
-* Samuel Asher Rivello's Medium Article - <a href="https://sam-16930.medium.com/unity-project-structure-a694792cefed">Unity — Project Structure Best Practices</a>
-* Samuel Asher Rivello's Medium Article - <a href="https://sam-16930.medium.com/coding-standards-in-c-39aefee92db8">Unity — C# Coding Standards</a>
+* Samuel Asher Rivello's <a href="https://www.samuelasherrivello.com/godot-portfolio/">Godot Portfolio</a> - Articles, Repos, & Tips
+* Samuel Asher Rivello's <a href="https://sam-16930.medium.com/unity-project-structure-a694792cefed">Unity Article — Project Structure Best Practices</a> - Ideal setup
+* Samuel Asher Rivello's <a href="https://sam-16930.medium.com/coding-standards-in-c-39aefee92db8">Unity Article — C# Coding Standards</a> - Naming, conventions, more!
 
 <BR>
 <BR>
