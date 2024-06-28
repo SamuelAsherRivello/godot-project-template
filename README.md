@@ -76,10 +76,9 @@ This **Godot Project** is featured in the following YouTube video playlist.
 <BR>
 <BR>
 
-
-
 ## Resources
 
+* Samuel Asher Rivello's Godot Portfolio - <a href="http://www.samuelasherrivello.com/best-practices">Godot — Articles, Repos, Tips</a>
 * Samuel Asher Rivello's Medium Article - <a href="https://sam-16930.medium.com/unity-project-structure-a694792cefed">Unity — Project Structure Best Practices</a>
 * Samuel Asher Rivello's Medium Article - <a href="https://sam-16930.medium.com/coding-standards-in-c-39aefee92db8">Unity — C# Coding Standards</a>
 
