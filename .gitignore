@@ -1,0 +1,31 @@
+# Godot 4+ specific ignores
+/[Gg]odot/.godot/
+
+# Godot-specific ignores
+/[Gg]odot/.import/
+/[Gg]odot/export.cfg
+/[Gg]odot/export_presets.cfg
+/[Gg]odot/.mono/
+/[Gg]odot/data_*/
+/[Gg]odot/mono_crash.*.json
+
+# Godot Cache files
+/[Gg]odot/.cache/
+
+# User-specific Godot settings
+/[Gg]odot/.godot/user_settings.ini
+
+# Imported translations (automatically generated from CSV files)
+/[Gg]odot/*.translation
+
+# Mono-specific ignores
+/[Gg]odot/.mono/
+/[Gg]odot/data_*/
+/[Gg]odot/mono_crash.*.json
+
+# JetBrains ignores
+/[Gg]odot/.idea/
+/[Gg]odot/.vs/
+
+# Backup files
+/[Gg]odot/*.godot.save

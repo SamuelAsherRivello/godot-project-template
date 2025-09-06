@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvtayrp67pnlf"]
+
+[ext_resource type="Script" uid="uid://doroj0taqclu6" path="res://Scripts/Runtime/RMC/[MyProject]/View/HUDCanvasLayer.cs" id="1_jbtnl"]
+[ext_resource type="PackedScene" uid="uid://d0xf4bubmdukn" path="res://Scenes/View/CornerContainer.tscn" id="2_5ngyp"]
+
+[node name="HUDCanvasLayer" type="CanvasLayer" node_paths=PackedStringArray("CornerContainerUL", "CornerContainerUR", "CornerContainerLL", "CornerContainerLR")]
+script = ExtResource("1_jbtnl")
+CornerContainerUL = NodePath("CornerContainerUL")
+CornerContainerUR = NodePath("CornerContainerUR")
+CornerContainerLL = NodePath("CornerContainerLL")
+CornerContainerLR = NodePath("CornerContainerLR")
+
+[node name="CornerContainerUL" parent="." instance=ExtResource("2_5ngyp")]
+
+[node name="CornerContainerUR" parent="." instance=ExtResource("2_5ngyp")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -227.0
+offset_right = 0.0
+grow_horizontal = 0
+
+[node name="CornerContainerLL" parent="." instance=ExtResource("2_5ngyp")]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -67.0
+offset_bottom = 0.0
+grow_vertical = 0
+
+[node name="CornerContainerLR" parent="." instance=ExtResource("2_5ngyp")]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -227.0
+offset_top = -67.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 0
+grow_vertical = 0
