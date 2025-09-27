@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3jaigjnswycr"]
+
+[ext_resource type="Theme" uid="uid://sda5jgiceuo0" path="res://Settings/Themes/GameTheme.tres" id="1_kefr5"]
+[ext_resource type="Script" uid="uid://bwb4p6ar5xopp" path="res://Scripts/Runtime/RMC/[MyProject]/Views/UIs/CornerUI.gd" id="2_vtpjr"]
+
+[node name="CornerUI" type="Control" node_paths=PackedStringArray("richTextLabel")]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 259.0
+offset_bottom = 74.0
+theme = ExtResource("1_kefr5")
+script = ExtResource("2_vtpjr")
+richTextLabel = NodePath("ColorRect/RichTextLabel")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.39215687, 0.39215687, 0.39215687, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Lives:000"
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Godot"
-run/main_scene="res://Scenes/SampleScene.tscn"
-config/features=PackedStringArray("4.5", "C#", "Forward Plus")
+run/main_scene="uid://buxpxt1bansar"
+config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+StaticCommonUtility="*res://Scripts/Runtime/RMC/Utilities/CommonUtility.gd"
 
 [dotnet]
 
@@ -53,3 +57,7 @@ ui_down={
 , Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":1,"axis_value":1.0,"script":null)
 ]
 }
+
+[rendering]
+
+lights_and_shadows/directional_shadow/soft_shadow_filter_quality=5

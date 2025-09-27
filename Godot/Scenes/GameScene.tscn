@@ -1,0 +1,73 @@
+[gd_scene load_steps=12 format=3 uid="uid://buxpxt1bansar"]
+
+[ext_resource type="Script" uid="uid://dks4jdanr477d" path="res://Scripts/Runtime/RMC/[MyProject]/Controllers/GameController.gd" id="1_3mbwn"]
+[ext_resource type="Script" uid="uid://d2eaqbfwh4hxq" path="res://Scripts/Runtime/RMC/[MyProject]/GameScene.gd" id="1_jwv4s"]
+[ext_resource type="PackedScene" uid="uid://c7gfwd3jkij6r" path="res://Scenes/Views/GameView.tscn" id="2_kilg5"]
+[ext_resource type="PackedScene" uid="uid://dxw7cledbpiia" path="res://addons/proto-csgs/proto_csg_box_3d.tscn" id="5_kilg5"]
+[ext_resource type="Texture2D" uid="uid://cej3yoosomfd2" path="res://addons/proto-csgs/textures/dark/texture_13.png" id="6_x6js8"]
+[ext_resource type="Texture2D" uid="uid://5kvyfnesnfd2" path="res://addons/proto-csgs/textures/dark/texture_04.png" id="7_x6js8"]
+
+[sub_resource type="Sky" id="Sky_c3lgb"]
+
+[sub_resource type="Environment" id="Environment_c3lgb"]
+background_color = Color(0.09727488, 0.26412714, 0.3848848, 1)
+sky = SubResource("Sky_c3lgb")
+
+[sub_resource type="CameraAttributesPhysical" id="CameraAttributesPhysical_t0q61"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lg2j6"]
+resource_local_to_scene = true
+albedo_texture = ExtResource("6_x6js8")
+uv1_offset = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y30xb"]
+albedo_color = Color(2.1682336, 2.1682336, 2.1682336, 1)
+albedo_texture = ExtResource("7_x6js8")
+
+[node name="GameScene" type="Node3D" node_paths=PackedStringArray("gameView", "gameController")]
+script = ExtResource("1_jwv4s")
+gameView = NodePath("GameView")
+gameController = NodePath("GameController")
+
+[node name="Common" type="Node3D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Common"]
+environment = SubResource("Environment_c3lgb")
+camera_attributes = SubResource("CameraAttributesPhysical_t0q61")
+
+[node name="Lights" type="Node3D" parent="Common"]
+
+[node name="KeyLight" type="DirectionalLight3D" parent="Common/Lights"]
+transform = Transform3D(0.8498927, -0.14966355, 0.5052557, -0.21361786, 0.7786511, 0.58997446, -0.4817156, -0.6093466, 0.62979907, 8.126732, 10, 9.957886)
+light_energy = 0.7
+shadow_enabled = true
+
+[node name="FillLight" type="DirectionalLight3D" parent="Common/Lights"]
+transform = Transform3D(0.8021823, 0.16957968, -0.57249135, 0.3199135, 0.6875044, 0.65191495, 0.50414187, -0.7061024, 0.49725297, -7.531941, 10, 9.957886)
+shadow_enabled = true
+
+[node name="BackLight" type="DirectionalLight3D" parent="Common/Lights"]
+transform = Transform3D(-0.8844915, 0.13250919, -0.4473435, -0.18768793, 0.77675694, 0.6011841, 0.42713952, 0.6157031, -0.6621645, -7.531941, 10, -13.824814)
+light_energy = 0.2
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="Common"]
+transform = Transform3D(1, 0, 0, 0, 0.9156626, 0.40194777, 0, -0.40194777, 0.9156626, 0, 7.1304016, 18.887604)
+fov = 23.3
+
+[node name="GameView" parent="." instance=ExtResource("2_kilg5")]
+
+[node name="GameController" type="Node3D" parent="." node_paths=PackedStringArray("player", "gameView")]
+script = ExtResource("1_3mbwn")
+player = NodePath("../Player")
+gameView = NodePath("../GameView")
+metadata/_custom_type_script = "uid://dks4jdanr477d"
+
+[node name="Player" parent="." instance=ExtResource("5_kilg5")]
+material = SubResource("StandardMaterial3D_lg2j6")
+
+[node name="Floor" parent="." instance=ExtResource("5_kilg5")]
+transform = Transform3D(1, 0, 0, 0, 0.99999774, 0.0021293, 0, -0.0021293, 0.99999774, 0, -0.75, 0)
+size = Vector3(10, 0.5, 10)
+material = SubResource("StandardMaterial3D_y30xb")

@@ -1,0 +1,12 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://sda5jgiceuo0"]
+
+[ext_resource type="FontFile" uid="uid://cduxx7pgwwsq2" path="res://Art/Fonts/BebasNeue-Regular.ttf" id="1_g6a84"]
+
+[resource]
+RichTextLabel/colors/default_color = Color(0.9413647, 0.9413647, 0.94136465, 1)
+RichTextLabel/colors/font_shadow_color = Color(0, 0, 0, 0.50980395)
+RichTextLabel/constants/shadow_offset_x = 1
+RichTextLabel/constants/shadow_offset_y = 1
+RichTextLabel/font_sizes/bold_font_size = 16
+RichTextLabel/font_sizes/normal_font_size = 50
+RichTextLabel/fonts/normal_font = ExtResource("1_g6a84")
