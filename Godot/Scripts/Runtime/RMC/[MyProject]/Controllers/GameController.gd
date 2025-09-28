@@ -94,8 +94,8 @@ func process_movement(delta: float) -> void:
 		var movement_vector3 := Vector3(_input_vector.x, 0.0, _input_vector.y)
 		player.position += movement_vector3 * delta
 		example_signal.emit(movement_vector3)
-		gameModel.score += int(_input_vector.x)
-		gameModel.lives += int(_input_vector.y)
+		gameModel.score.Value += int(_input_vector.x)
+		gameModel.lives.Value += int(_input_vector.y)
 	pass
 
 func process_rotation(delta: float) -> void:

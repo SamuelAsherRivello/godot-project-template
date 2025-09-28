@@ -34,8 +34,10 @@ var gameModel: GameModel:
 		return _gameModel
 	set(value):
 		_gameModel = value
-		_gameModel.on_model_changed.connect(_on_model_changed)
-		_on_model_changed()
+		_gameModel.level.subscribe(_on_model_changed).dispose_with(self)
+		_gameModel.lives.subscribe(_on_model_changed).dispose_with(self)
+		_gameModel.instructions.subscribe(_on_model_changed).dispose_with(self)
+		_gameModel.score.subscribe(_on_model_changed).dispose_with(self)
 
 
 # ========================================
@@ -60,9 +62,8 @@ func _ready() -> void:
 # Event Handlers
 # ========================================
 
-func _on_model_changed () -> void:
-
-	corner_ui_upper_left.richTextLabel.text = "Lives: %03d" % gameModel.lives
-	corner_ui_upper_right.richTextLabel.text = "Score: %03d" % gameModel.score
-	corner_ui_lower_left.richTextLabel.text = "Tip: %s" % gameModel.instructions
-	corner_ui_lower_right.richTextLabel.text = "Level: %03d" % gameModel.level
+func _on_model_changed(_new_value) -> void:
+	corner_ui_upper_left.richTextLabel.text = "Lives: %03d" % gameModel.lives.Value
+	corner_ui_upper_right.richTextLabel.text = "Score: %03d" % gameModel.score.Value
+	corner_ui_lower_left.richTextLabel.text = "Tip: %s" % gameModel.instructions.Value
+	corner_ui_lower_right.richTextLabel.text = "Level: %03d" % gameModel.level.Value

@@ -18,10 +18,15 @@ config/icon="res://icon.svg"
 [autoload]
 
 StaticCommonUtility="*res://Scripts/Runtime/RMC/Utilities/CommonUtility.gd"
+GDRx="*res://addons/reactivex/__gdrxsingleton__.gd"
 
 [dotnet]
 
 project/assembly_name="Godot"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/reactivex/plugin.cfg")
 
 [input]
 
