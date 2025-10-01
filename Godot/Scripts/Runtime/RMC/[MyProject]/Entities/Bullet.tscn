@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bendyamkunkhr"]
+
+[ext_resource type="Script" uid="uid://bpj10tce5305c" path="res://Scripts/Runtime/RMC/[MyProject]/Entities/Bullet.gd" id="1_kwc8d"]
+[ext_resource type="Material" uid="uid://c4lx27cpv7ogo" path="res://Art/Materials/BulletMaterial.tres" id="2_5a4no"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_hybu8"]
+
+[node name="Bullet" type="RigidBody3D"]
+script = ExtResource("1_kwc8d")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+shape = SubResource("SphereShape3D_hybu8")
+debug_fill = false
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+material = ExtResource("2_5a4no")

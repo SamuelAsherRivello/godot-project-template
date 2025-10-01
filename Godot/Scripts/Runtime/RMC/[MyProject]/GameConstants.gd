@@ -5,12 +5,15 @@
 # Class
 # ========================================
 
-class_name GameModel
+class_name GameConstants
 extends RefCounted
 
 # ========================================
 # Constants
 # ========================================
+
+## The lowest Y position in the game world, used for fall detection and boundaries
+static var WORLD_BOTTOM_Y: float = -10.0
 
 # ========================================
 # Exports
@@ -24,11 +27,6 @@ extends RefCounted
 # Properties
 # ========================================
 
-var instructions = ReactiveProperty.new("Use WASD")
-var level = ReactiveProperty.new(1)
-var lives = ReactiveProperty.new(3)
-var score = ReactiveProperty.new(0)
-
 # ========================================
 # Variables
 # ========================================
@@ -36,10 +34,6 @@ var score = ReactiveProperty.new(0)
 # ========================================
 # Methods (Godot)
 # ========================================
-
-# Constructor
-func _init() -> void:
-	print("%s._init()" % get_script().get_global_name())
 
 # ========================================
 # Methods (Custom)

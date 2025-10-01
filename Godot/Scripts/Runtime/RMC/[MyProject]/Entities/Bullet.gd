@@ -4,9 +4,8 @@
 # ========================================
 # Class
 # ========================================
-
-class_name GameModel
-extends RefCounted
+class_name Bullet
+extends RigidBody3D
 
 # ========================================
 # Constants
@@ -20,26 +19,34 @@ extends RefCounted
 # Signals
 # ========================================
 
+signal queue_free_completed()
+
 # ========================================
 # Properties
 # ========================================
-
-var instructions = ReactiveProperty.new("Use WASD")
-var level = ReactiveProperty.new(1)
-var lives = ReactiveProperty.new(3)
-var score = ReactiveProperty.new(0)
 
 # ========================================
 # Variables
 # ========================================
 
 # ========================================
+# Methods (DI)
+# ========================================
+
+# ========================================
 # Methods (Godot)
 # ========================================
 
-# Constructor
-func _init() -> void:
-	print("%s._init()" % get_script().get_global_name())
+func _ready() -> void:
+
+	# print("%s._ready()" % get_script().get_global_name())
+	pass
+
+func _process(_delta: float) -> void:
+	if position.y < GameConstants.WORLD_BOTTOM_Y:
+		# print("%s position (y: %.2f). So destroying" % [get_script().get_global_name(), position.y])
+		queue_free_completed.emit()
+		queue_free()
 
 # ========================================
 # Methods (Custom)

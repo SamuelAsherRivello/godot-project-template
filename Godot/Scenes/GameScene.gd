@@ -44,20 +44,22 @@ func _ready() -> void:
 	CommonUtility.assert_node_not_null(gameController, "gameController")
 	CommonUtility.assert_node_not_null(gameView, "gameView")
 
-	# ----------------------------------------
-	# Dependency Injection Setup
-	# ----------------------------------------
-	# Bind GameModel as a shared singleton and expose via variable name 'gameModel'
-	# (Injection will assign to matching variable names in dependent scripts.)
-	DI.bind(GameModel, DI.As.SINGLETON).to_var("_gameModel")
-
-	# Provide dependency graph for this subtree (injects children: controller, view, etc.)
-	DI.provide_tree(self)
+	# Initialize Dependency Injection
+	_bootstrap_di()
 	pass
 
 # ========================================
 # Methods (Custom)
 # ========================================
+
+func _bootstrap_di() -> void:
+
+	# Bind GameModel as a shared singleton and expose via variable name '_gameModel'
+	DI.bind(GameModel, DI.As.SINGLETON).to_var("_gameModel")
+
+	# Provide dependency graph for this subtree (injects children: controller, view, etc.)
+	DI.provide_tree(self)
+	pass
 
 # ========================================
 # Event Handlers
