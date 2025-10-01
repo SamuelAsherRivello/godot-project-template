@@ -1,11 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://buxpxt1bansar"]
+[gd_scene load_steps=12 format=3 uid="uid://c4p760k7oplg1"]
 
-[ext_resource type="Script" uid="uid://dks4jdanr477d" path="res://Scripts/Runtime/RMC/[MyProject]/Controllers/GameController.gd" id="1_3mbwn"]
-[ext_resource type="Script" uid="uid://d2eaqbfwh4hxq" path="res://Scripts/Runtime/RMC/[MyProject]/GameScene.gd" id="1_jwv4s"]
-[ext_resource type="PackedScene" uid="uid://c7gfwd3jkij6r" path="res://Scenes/Views/GameView.tscn" id="2_kilg5"]
-[ext_resource type="PackedScene" uid="uid://dxw7cledbpiia" path="res://addons/proto-csgs/proto_csg_box_3d.tscn" id="5_kilg5"]
-[ext_resource type="Texture2D" uid="uid://cej3yoosomfd2" path="res://addons/proto-csgs/textures/dark/texture_13.png" id="6_x6js8"]
-[ext_resource type="Texture2D" uid="uid://5kvyfnesnfd2" path="res://addons/proto-csgs/textures/dark/texture_04.png" id="7_x6js8"]
+[ext_resource type="Script" uid="uid://d2eaqbfwh4hxq" path="res://Scripts/Runtime/RMC/[MyProject]/GameScene.gd" id="1_ge1of"]
+[ext_resource type="PackedScene" uid="uid://c7gfwd3jkij6r" path="res://Scenes/Views/GameView.tscn" id="2_4xblw"]
+[ext_resource type="Script" uid="uid://dks4jdanr477d" path="res://Scripts/Runtime/RMC/[MyProject]/Controllers/GameController.gd" id="3_0btwo"]
+[ext_resource type="PackedScene" uid="uid://dxw7cledbpiia" path="res://addons/proto-csgs/proto_csg_box_3d.tscn" id="4_lu27t"]
+[ext_resource type="Texture2D" uid="uid://cej3yoosomfd2" path="res://addons/proto-csgs/textures/dark/texture_13.png" id="5_355ll"]
+[ext_resource type="Texture2D" uid="uid://5kvyfnesnfd2" path="res://addons/proto-csgs/textures/dark/texture_04.png" id="6_wdrso"]
 
 [sub_resource type="Sky" id="Sky_c3lgb"]
 
@@ -17,16 +17,16 @@ sky = SubResource("Sky_c3lgb")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lg2j6"]
 resource_local_to_scene = true
-albedo_texture = ExtResource("6_x6js8")
+albedo_texture = ExtResource("5_355ll")
 uv1_offset = Vector3(0.5, 0.5, 0.5)
 uv1_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y30xb"]
 albedo_color = Color(2.1682336, 2.1682336, 2.1682336, 1)
-albedo_texture = ExtResource("7_x6js8")
+albedo_texture = ExtResource("6_wdrso")
 
 [node name="GameScene" type="Node3D" node_paths=PackedStringArray("gameView", "gameController")]
-script = ExtResource("1_jwv4s")
+script = ExtResource("1_ge1of")
 gameView = NodePath("GameView")
 gameController = NodePath("GameController")
 
@@ -56,18 +56,18 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 0.9156626, 0.40194777, 0, -0.40194777, 0.9156626, 0, 7.1304016, 18.887604)
 fov = 23.3
 
-[node name="GameView" parent="." instance=ExtResource("2_kilg5")]
+[node name="GameView" parent="." instance=ExtResource("2_4xblw")]
 
 [node name="GameController" type="Node3D" parent="." node_paths=PackedStringArray("player", "gameView")]
-script = ExtResource("1_3mbwn")
+script = ExtResource("3_0btwo")
 player = NodePath("../Player")
 gameView = NodePath("../GameView")
 metadata/_custom_type_script = "uid://dks4jdanr477d"
 
-[node name="Player" parent="." instance=ExtResource("5_kilg5")]
+[node name="Player" parent="." instance=ExtResource("4_lu27t")]
 material = SubResource("StandardMaterial3D_lg2j6")
 
-[node name="Floor" parent="." instance=ExtResource("5_kilg5")]
+[node name="Floor" parent="." instance=ExtResource("4_lu27t")]
 transform = Transform3D(1, 0, 0, 0, 0.99999774, 0.0021293, 0, -0.0021293, 0.99999774, 0, -0.75, 0)
 size = Vector3(10, 0.5, 10)
 material = SubResource("StandardMaterial3D_y30xb")
