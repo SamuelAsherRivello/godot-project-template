@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 StaticCommonUtility="*res://Scripts/Runtime/RMC/Utilities/CommonUtility.gd"
 GDRx="*res://addons/reactivex/__gdrxsingleton__.gd"
+DI="*res://addons/DependencyInjection/DI.gd"
 
 [dotnet]
 
@@ -26,7 +27,7 @@ project/assembly_name="Godot"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/reactivex/plugin.cfg")
+enabled=PackedStringArray("res://addons/DependencyInjection/plugin.cfg", "res://addons/reactivex/plugin.cfg")
 
 [input]
 
