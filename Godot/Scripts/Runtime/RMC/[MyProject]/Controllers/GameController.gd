@@ -39,8 +39,19 @@ signal example_signal(movement_vector: Vector3)
 # ========================================
 # Variables
 # ========================================
-var gameModel: GameModel
+
+var _gameModel: GameModel
 var _input_vector := INPUT_VECTOR_DEFAULT
+
+# ========================================
+# Methods (DI)
+# ========================================
+
+func _injected() -> void:
+
+	# Validate
+	CommonUtility.assert_refcounted_not_null(_gameModel, "_gameModel")
+	pass
 
 # ========================================
 # Methods (Godot)
@@ -50,10 +61,9 @@ func _ready() -> void:
 
 	print("%s._ready()" % get_script().get_global_name())
 
-	# Validate
+	# Validate (only exported scene references here; injected deps validated in _injected)
 	CommonUtility.assert_node_not_null(player, "player")
 	CommonUtility.assert_node_not_null(gameView, "gameView")
-
 	pass
 
 func _process(delta: float) -> void:
@@ -94,8 +104,9 @@ func process_movement(delta: float) -> void:
 		var movement_vector3 := Vector3(_input_vector.x, 0.0, _input_vector.y)
 		player.position += movement_vector3 * delta
 		example_signal.emit(movement_vector3)
-		gameModel.score.Value += int(_input_vector.x)
-		gameModel.lives.Value += int(_input_vector.y)
+		if _gameModel != null: # safety in case of timing
+			_gameModel.score.Value += int(_input_vector.x)
+			_gameModel.lives.Value += int(_input_vector.y)
 	pass
 
 func process_rotation(delta: float) -> void:

@@ -31,7 +31,6 @@ extends Node3D
 # ========================================
 # Variables
 # ========================================
-var gameModel: GameModel
 
 # ========================================
 # Methods (Godot)
@@ -45,9 +44,15 @@ func _ready() -> void:
 	CommonUtility.assert_node_not_null(gameController, "gameController")
 	CommonUtility.assert_node_not_null(gameView, "gameView")
 
-	gameModel = GameModel.new()
-	gameController.gameModel = gameModel
-	gameView.gameModel = gameModel
+	# ----------------------------------------
+	# Dependency Injection Setup
+	# ----------------------------------------
+	# Bind GameModel as a shared singleton and expose via variable name 'gameModel'
+	# (Injection will assign to matching variable names in dependent scripts.)
+	DI.bind(GameModel, DI.As.SINGLETON).to_var("_gameModel")
+
+	# Provide dependency graph for this subtree (injects children: controller, view, etc.)
+	DI.provide_tree(self)
 	pass
 
 # ========================================
