@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c4lx27cpv7ogo"]
+
+[ext_resource type="Texture2D" uid="uid://bn66p4ar3fje4" path="res://addons/proto-csgs/textures/red/texture_13.png" id="1_xgiux"]
+
+[resource]
+albedo_texture = ExtResource("1_xgiux")

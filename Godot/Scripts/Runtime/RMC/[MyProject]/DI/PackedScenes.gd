@@ -4,9 +4,8 @@
 # ========================================
 # Class
 # ========================================
-
-class_name GameScene
-extends Node3D
+class_name PackedScenes
+extends Node
 
 # ========================================
 # Constants
@@ -16,9 +15,9 @@ extends Node3D
 # Exports
 # ========================================
 
-@export_group("Nodes")
-@export var gameView: GameView
-@export var gameController: GameController
+# The DI Framework cannot accept PackedScene. So I use a Node to hold them.
+# Then I can inject this Node and access the PackedScenes from it.
+@export var packedScenes: Array[PackedScene] = []
 
 # ========================================
 # Signals
@@ -31,24 +30,14 @@ extends Node3D
 # ========================================
 # Variables
 # ========================================
-var gameModel: GameModel
+
+# ========================================
+# Methods (DI)
+# ========================================
 
 # ========================================
 # Methods (Godot)
 # ========================================
-
-func _ready() -> void:
-
-	print("%s._ready()" % get_script().get_global_name())
-
-	# Validate
-	CommonUtility.assert_node_not_null(gameController, "gameController")
-	CommonUtility.assert_node_not_null(gameView, "gameView")
-
-	gameModel = GameModel.new()
-	gameController.gameModel = gameModel
-	gameView.gameModel = gameModel
-	pass
 
 # ========================================
 # Methods (Custom)

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://nruhstweywvn"]
+
+[ext_resource type="Material" uid="uid://nu7q0wt8s18l" path="res://Art/Materials/FloorMaterial.tres" id="1_cq0lu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bbfpb"]
+size = Vector3(10, 0.5, 10)
+
+[node name="Floor" type="StaticBody3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+size = Vector3(10, 0.5, 10)
+material = ExtResource("1_cq0lu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_bbfpb")

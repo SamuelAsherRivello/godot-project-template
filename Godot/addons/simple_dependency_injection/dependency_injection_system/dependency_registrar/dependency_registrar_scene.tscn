@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2fvnr42s50t4"]
+
+[ext_resource type="Script" uid="uid://djmvqbnwxji3h" path="res://addons/simple_dependency_injection/dependency_injection_system/dependency_registrar/dependency_registrar.gd" id="1_uhkje"]
+
+[node name="DependencyRegistrarScene" type="Node"]
+script = ExtResource("1_uhkje")

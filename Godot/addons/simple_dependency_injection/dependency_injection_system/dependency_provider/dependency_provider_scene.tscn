@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwye6xmnnckk5"]
+
+[ext_resource type="Script" uid="uid://gcgdwtimrkko" path="res://addons/simple_dependency_injection/dependency_injection_system/dependency_provider/dependency_provider.gd" id="1_6817c"]
+
+[node name="DependencyProviderScene" type="Node"]
+script = ExtResource("1_6817c")

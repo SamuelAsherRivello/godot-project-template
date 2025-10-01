@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c7gfwd3jkij6r"]
 
 [ext_resource type="Script" uid="uid://ba2wtl48tjm4n" path="res://Scripts/Runtime/RMC/[MyProject]/Views/GameView.gd" id="1_dj4qn"]
-[ext_resource type="PackedScene" uid="uid://d3jaigjnswycr" path="res://Scenes/Views/UIs/CornerUI.tscn" id="2_fjd12"]
+[ext_resource type="PackedScene" uid="uid://d3jaigjnswycr" path="res://Scripts/Runtime/RMC/[MyProject]/Views/UIs/CornerUI.tscn" id="2_fjd12"]
 
 [node name="GameView" type="CanvasLayer" node_paths=PackedStringArray("corner_ui_upper_left", "corner_ui_upper_right", "corner_ui_lower_left", "corner_ui_lower_right")]
 script = ExtResource("1_dj4qn")
@@ -25,6 +25,7 @@ anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_top = -74.0
+offset_right = 376.0
 offset_bottom = 0.0
 grow_vertical = 0
 
