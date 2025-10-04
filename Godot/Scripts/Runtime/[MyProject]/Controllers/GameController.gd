@@ -112,7 +112,7 @@ func _on_bullet_queue_free_completed() -> void:
 
 func _on_player_death_requested() -> void:
 
-	get_tree().call_group(GameConstants.GROUP_BULLETS, "queue_free")
+	get_tree().call_group(GameConstants.GROUP_BULLETS, "queue_free_animate")
 
 	_gameModel.lives.Value -= 1
 

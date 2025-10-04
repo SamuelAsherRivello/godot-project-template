@@ -30,7 +30,7 @@ signal queue_free_completed()
 # Variables
 # ========================================
 
-# No variables to strongly type yet
+var _is_animating_death: bool = false
 
 # ========================================
 # Methods (DI)
@@ -44,6 +44,9 @@ func _ready() -> void:
 	pass
 
 func _process(_delta: float) -> void:
+	if _is_animating_death:
+		return
+
 	if position.y < GameConstants.WORLD_BOTTOM_Y:
 		queue_free_completed.emit()
 		queue_free()
@@ -51,6 +54,17 @@ func _process(_delta: float) -> void:
 # ========================================
 # Methods (Custom)
 # ========================================
+
+func queue_free_animate() -> void:
+	if _is_animating_death:
+		return
+
+	_is_animating_death = true
+
+	# Create a tween to shrink the bullet to 0 size over 0.1 seconds
+	var tween := create_tween()
+	tween.tween_property(self, "scale", Vector3.ZERO, 0.1)
+	tween.tween_callback(queue_free)
 
 # ========================================
 # Event Handlers
