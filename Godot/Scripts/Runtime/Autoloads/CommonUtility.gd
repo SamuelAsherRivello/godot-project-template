@@ -52,6 +52,18 @@ static func assert_node_not_null(node: Node, node_name : String) -> void:
 		assert(false, error_message)
 	pass
 
+static func find_child_of_type(parent: Node, type_to_find) -> Node:
+	# Check if the parent itself is the type we're looking for
+	if is_instance_of(parent, type_to_find):
+		return parent
+
+	# Recursively search through children
+	for child in parent.get_children():
+		var result := CommonUtility.find_child_of_type(child, type_to_find)
+		if result != null:
+			return result
+	return null
+
 # ========================================
 # Event Handlers
 # ========================================

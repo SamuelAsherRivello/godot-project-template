@@ -81,5 +81,5 @@ func _ready() -> void:
 func _on_model_changed(_new_value) -> void:
 	corner_ui_upper_left.richTextLabel.text = "Lives: %03d" % _gameModel.lives.Value
 	corner_ui_upper_right.richTextLabel.text = "Score: %03d" % _gameModel.score.Value
-	corner_ui_lower_left.richTextLabel.text = "Tip: %s" % _gameModel.instructions.Value
+	corner_ui_lower_left.richTextLabel.text = "%s" % _gameModel.instructions.Value
 	corner_ui_lower_right.richTextLabel.text = "Level: %03d" % _gameModel.level.Value

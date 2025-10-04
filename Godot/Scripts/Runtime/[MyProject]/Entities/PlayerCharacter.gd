@@ -20,7 +20,7 @@ const ROTATION_OFFSET: float = PI  # 180 degrees in radians
 # ========================================
 
 @export_group("Resources")
-@export var weapon_resource: WeaponResource
+@export var weapon_resources: Array[WeaponResource] = []
 
 @export_group("Settings")
 @export var acceleration: float = 1.0
@@ -46,6 +46,7 @@ signal bullet_instantiate_requested;
 var _input_vector : Vector2 = Vector2.ZERO
 var _spawn_position: Vector3
 var _gameModel: GameModel
+var _weapon_resource_index: int = 0
 
 # ========================================
 # Methods (DI)
@@ -103,6 +104,23 @@ func process_input() -> void:
 	if Input.is_action_pressed("ui_accept"):
 		bullet_instantiate_requested.emit()
 		pass
+
+	# Weapon cycling with 1/2 keys
+	if Input.is_action_just_pressed("ui_text_1"):
+		cycle_weapon(0)
+
+	if Input.is_action_just_pressed("ui_text_2"):
+		cycle_weapon(1)
+
+func cycle_weapon(index : int) -> void:
+	if weapon_resources.size() == 0:
+		return
+
+	_weapon_resource_index = index;
+	print("Switched to weapon index: %d" % _weapon_resource_index)
+
+func get_active_weapon() -> WeaponResource:
+	return weapon_resources[_weapon_resource_index]
 
 func process_movement(delta: float) -> void:
 	var target_velocity: Vector3 = Vector3(_input_vector.x, velocity.y, _input_vector.y) * move_speed_vector3

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://djarndsuh31ym"]
+
+[ext_resource type="PackedScene" uid="uid://bendyamkunkhr" path="res://Scripts/Runtime/[MyProject]/Entities/Bullet/_Shared/BaseBullet.tscn" id="1_lv1uo"]
+[ext_resource type="Material" uid="uid://c4lx27cpv7ogo" path="res://Art/Materials/FireBulletMaterial.tres" id="2_yny3h"]
+
+[node name="BaseBullet" instance=ExtResource("1_lv1uo")]
+
+[node name="CSGSphere3D" parent="." index="1"]
+material = ExtResource("2_yny3h")

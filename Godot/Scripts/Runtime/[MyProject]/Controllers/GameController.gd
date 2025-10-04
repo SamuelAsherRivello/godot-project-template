@@ -78,10 +78,11 @@ func _ready() -> void:
 
 func _on_bullet_instantiate_requested() -> void:
 
-	if playerCharacter.weapon_resource.can_shoot():
+	var active_weapon := playerCharacter.get_active_weapon()
+	if active_weapon.can_shoot():
 
 		# Instantiate
-		var bullet := playerCharacter.weapon_resource.bullet_packed_scene.instantiate() as Bullet
+		var bullet := active_weapon.bullet_packed_scene.instantiate() as BaseBullet
 		get_tree().current_scene.add_child(bullet)
 		bullet.global_position = playerCharacter.global_position + Vector3(0, 0.75, 0)
 		bullet.linear_velocity = Vector3(0, 5, -2)  # Up and slightly forward

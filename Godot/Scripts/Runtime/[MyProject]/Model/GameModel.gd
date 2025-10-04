@@ -24,7 +24,7 @@ extends Node
 # Properties
 # ========================================
 
-var instructions = ReactiveProperty.new("Use WASD + Space")
+var instructions = ReactiveProperty.new("Keys: WASD,Space,1,2")
 var level = ReactiveProperty.new(1)
 var lives = ReactiveProperty.new(3)
 var score = ReactiveProperty.new(0)

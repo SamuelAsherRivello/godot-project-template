@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="WeaponResource" load_steps=3 format=3 uid="uid://cwoahkakeaqn5"]
+
+[ext_resource type="PackedScene" uid="uid://d0k7gd574o2sd" path="res://Scripts/Runtime/[MyProject]/Entities/Bullet/IceBullet.tscn" id="1_c8j64"]
+[ext_resource type="Script" uid="uid://de7cs5a4deo0c" path="res://Resources/[MyProject]/WeaponResource/WeaponResource.gd" id="2_kbi5u"]
+
+[resource]
+script = ExtResource("2_kbi5u")
+bullet_packed_scene = ExtResource("1_c8j64")
+metadata/_custom_type_script = "uid://de7cs5a4deo0c"

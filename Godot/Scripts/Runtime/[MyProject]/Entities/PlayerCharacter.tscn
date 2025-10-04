@@ -1,16 +1,18 @@
-[gd_scene load_steps=6 format=3 uid="uid://c72waw0txbxl1"]
+[gd_scene load_steps=8 format=3 uid="uid://c72waw0txbxl1"]
 
 [ext_resource type="Script" uid="uid://bcig2f8j0nud3" path="res://Scripts/Runtime/[MyProject]/Entities/PlayerCharacter.gd" id="1_v0eh8"]
-[ext_resource type="Resource" uid="uid://b8hm5nios60wf" path="res://Resources/[MyProject]/WeaponResource/BasicWeaponResource.tres" id="2_mb5ng"]
+[ext_resource type="Script" uid="uid://de7cs5a4deo0c" path="res://Resources/[MyProject]/WeaponResource/WeaponResource.gd" id="2_lb3l8"]
+[ext_resource type="Resource" uid="uid://b8hm5nios60wf" path="res://Resources/[MyProject]/WeaponResource/FireWeaponResource.tres" id="2_mb5ng"]
 [ext_resource type="Material" uid="uid://dnmjsxbdcqkqb" path="res://Art/Materials/PlayerMaterial.tres" id="2_twgl0"]
-[ext_resource type="Material" uid="uid://c4lx27cpv7ogo" path="res://Art/Materials/BulletMaterial.tres" id="3_q1rq3"]
+[ext_resource type="Resource" uid="uid://cwoahkakeaqn5" path="res://Resources/[MyProject]/WeaponResource/IceWeaponResource.tres" id="3_mkkp8"]
+[ext_resource type="Material" uid="uid://c4lx27cpv7ogo" path="res://Art/Materials/FireBulletMaterial.tres" id="3_q1rq3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lg2j6"]
 
 [node name="PlayerCharacter" type="CharacterBody3D"]
 slide_on_ceiling = false
 script = ExtResource("1_v0eh8")
-weapon_resource = ExtResource("2_mb5ng")
+weapon_resources = Array[ExtResource("2_lb3l8")]([ExtResource("3_mkkp8"), ExtResource("2_mb5ng")])
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_lg2j6")
