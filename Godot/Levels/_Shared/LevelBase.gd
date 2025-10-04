@@ -5,7 +5,7 @@
 # Class
 # ========================================
 
-class_name GameScene
+class_name LevelBase
 extends Node
 
 # ========================================

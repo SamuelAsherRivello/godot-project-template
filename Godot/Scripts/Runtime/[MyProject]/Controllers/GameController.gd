@@ -20,7 +20,6 @@ class_name GameController
 @export var playerCharacter: PlayerCharacter
 @export var gameView: GameView
 
-
 # ========================================
 # Signals
 # ========================================
@@ -59,6 +58,8 @@ func _inject(gameModel: GameModel, packedScenes: PackedScenes) -> void:
 func _ready() -> void:
 
 	print("%s._ready()" % get_script().get_global_name())
+
+
 
 	# Validate
 	CommonUtility.assert_node_not_null(playerCharacter, "player")

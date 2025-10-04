@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://d3jaigjnswycr"]
 
 [ext_resource type="Theme" uid="uid://sda5jgiceuo0" path="res://Settings/Themes/GameTheme.tres" id="1_kefr5"]
-[ext_resource type="Script" uid="uid://bwb4p6ar5xopp" path="res://Scripts/Runtime/RMC/[MyProject]/Views/UIs/CornerUI.gd" id="2_vtpjr"]
+[ext_resource type="Script" uid="uid://bwb4p6ar5xopp" path="res://Scripts/Runtime/[MyProject]/Views/UIs/CornerUI.gd" id="2_vtpjr"]
 
 [node name="CornerUI" type="Control" node_paths=PackedStringArray("richTextLabel")]
 layout_mode = 3
