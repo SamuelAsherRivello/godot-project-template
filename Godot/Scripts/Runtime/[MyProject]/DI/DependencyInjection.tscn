@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cjvvwuuxusdk0"]
+[gd_scene load_steps=5 format=3 uid="uid://cjvvwuuxusdk0"]
 
 [ext_resource type="PackedScene" uid="uid://dwye6xmnnckk5" path="res://addons/simple_dependency_injection/dependency_injection_system/dependency_provider/dependency_provider_scene.tscn" id="1_l0opf"]
 [ext_resource type="PackedScene" uid="uid://d2fvnr42s50t4" path="res://addons/simple_dependency_injection/dependency_injection_system/dependency_registrar/dependency_registrar_scene.tscn" id="2_f31go"]
 [ext_resource type="Script" uid="uid://daij21u6e0osu" path="res://Scripts/Runtime/[MyProject]/Model/GameModel.gd" id="3_4ypb2"]
 [ext_resource type="Script" uid="uid://rjjjkgiawqsl" path="res://Scripts/Runtime/[MyProject]/DI/PackedScenes.gd" id="4_jehvu"]
-[ext_resource type="PackedScene" uid="uid://bendyamkunkhr" path="res://Scripts/Runtime/[MyProject]/Entities/Bullet.tscn" id="5_gn8x5"]
 
 [node name="DependencyInjection" type="Node3D"]
 
@@ -20,5 +19,4 @@ metadata/_custom_type_script = "uid://daij21u6e0osu"
 
 [node name="PackedScenes" type="Node" parent="DependencyRegistrar"]
 script = ExtResource("4_jehvu")
-packedScenes = Array[PackedScene]([ExtResource("5_gn8x5")])
 metadata/_custom_type_script = "uid://daij21u6e0osu"

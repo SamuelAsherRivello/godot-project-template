@@ -59,8 +59,6 @@ func _ready() -> void:
 
 	print("%s._ready()" % get_script().get_global_name())
 
-
-
 	# Validate
 	CommonUtility.assert_node_not_null(playerCharacter, "player")
 	CommonUtility.assert_node_not_null(gameView, "gameView")
@@ -80,17 +78,19 @@ func _ready() -> void:
 
 func _on_bullet_instantiate_requested() -> void:
 
-	# Instantiate
-	var bullet := _packedScenes.packedScenes[0].instantiate() as Bullet
-	get_tree().current_scene.add_child(bullet)
-	bullet.global_position = playerCharacter.global_position + Vector3(0, 0.75, 0)
-	bullet.linear_velocity = Vector3(0, 5, -2)  # Up and slightly forward
+	if playerCharacter.weapon_resource.can_shoot():
 
-	# Observe
-	bullet.queue_free_completed.connect(_on_bullet_queue_free_completed)
+		# Instantiate
+		var bullet := playerCharacter.weapon_resource.bullet_packed_scene.instantiate() as Bullet
+		get_tree().current_scene.add_child(bullet)
+		bullet.global_position = playerCharacter.global_position + Vector3(0, 0.75, 0)
+		bullet.linear_velocity = Vector3(0, 5, -2)  # Up and slightly forward
 
-	# Points
-	_gameModel.score.Value += 1
+		# Observe
+		bullet.queue_free_completed.connect(_on_bullet_queue_free_completed)
+
+		# Points
+		_gameModel.score.Value += 1
 
 func _on_bullet_queue_free_completed() -> void:
 

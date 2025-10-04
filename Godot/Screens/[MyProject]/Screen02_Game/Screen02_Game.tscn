@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=3 uid="uid://c4p760k7oplg1"]
 
-[ext_resource type="Script" uid="uid://d2eaqbfwh4hxq" path="res://Screens/Screen02_Game/Screen02_Game.gd" id="1_75hyh"]
-[ext_resource type="PackedScene" uid="uid://cjvvwuuxusdk0" path="res://Scripts/Runtime/[MyProject]/DI/DependencyInjection.tscn" id="2_slf4n"]
-[ext_resource type="PackedScene" uid="uid://c7gfwd3jkij6r" path="res://Scripts/Runtime/[MyProject]/Views/GameView.tscn" id="3_6ml6c"]
-[ext_resource type="Script" uid="uid://dks4jdanr477d" path="res://Scripts/Runtime/[MyProject]/Controllers/GameController.gd" id="4_d8mrp"]
-[ext_resource type="PackedScene" uid="uid://c72waw0txbxl1" path="res://Scripts/Runtime/[MyProject]/Entities/PlayerCharacter.tscn" id="5_k6js1"]
-[ext_resource type="PackedScene" uid="uid://cy1q2w2uhhp2o" path="res://Levels/Level01_Stone/Level01_Stone.tscn" id="6_75hyh"]
+[ext_resource type="Script" uid="uid://d2eaqbfwh4hxq" path="res://Scripts/Runtime/Utilities/CommonUtility.gd" id="1_nd3sc"]
+[ext_resource type="PackedScene" uid="uid://cjvvwuuxusdk0" path="res://Scripts/Runtime/[MyProject]/DI/DependencyInjection.tscn" id="2_7b7pc"]
+[ext_resource type="PackedScene" uid="uid://c7gfwd3jkij6r" path="res://Scripts/Runtime/[MyProject]/Views/GameView.tscn" id="3_2bspb"]
+[ext_resource type="Script" uid="uid://dks4jdanr477d" path="res://Scripts/Runtime/[MyProject]/Controllers/GameController.gd" id="4_s7dku"]
+[ext_resource type="PackedScene" uid="uid://c72waw0txbxl1" path="res://Scripts/Runtime/[MyProject]/Entities/PlayerCharacter.tscn" id="5_fxlpm"]
+[ext_resource type="PackedScene" path="res://Levels/Level01_Stone/Level01_Stone.tscn" id="6_a0aop"]
 
 [sub_resource type="Sky" id="Sky_c3lgb"]
 
@@ -16,11 +16,11 @@ sky = SubResource("Sky_c3lgb")
 [sub_resource type="CameraAttributesPhysical" id="CameraAttributesPhysical_t0q61"]
 
 [node name="GameScene" type="Node3D"]
-script = ExtResource("1_75hyh")
+script = ExtResource("1_nd3sc")
 
 [node name="Common" type="Node3D" parent="."]
 
-[node name="DependencyInjection" parent="Common" instance=ExtResource("2_slf4n")]
+[node name="DependencyInjection" parent="Common" instance=ExtResource("2_7b7pc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 17.749878, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Common"]
@@ -47,14 +47,14 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 0.9156626, 0.40194777, 0, -0.40194777, 0.9156626, 0, 7.1304016, 18.887604)
 fov = 23.3
 
-[node name="GameView" parent="." instance=ExtResource("3_6ml6c")]
+[node name="GameView" parent="." instance=ExtResource("3_2bspb")]
 
 [node name="GameController" type="Node3D" parent="." node_paths=PackedStringArray("playerCharacter", "gameView")]
-script = ExtResource("4_d8mrp")
+script = ExtResource("4_s7dku")
 playerCharacter = NodePath("../PlayerCharacter")
 gameView = NodePath("../GameView")
 metadata/_custom_type_script = "uid://dks4jdanr477d"
 
-[node name="PlayerCharacter" parent="." instance=ExtResource("5_k6js1")]
+[node name="PlayerCharacter" parent="." instance=ExtResource("5_fxlpm")]
 
-[node name="Level" parent="." instance=ExtResource("6_75hyh")]
+[node name="Level" parent="." instance=ExtResource("6_a0aop")]

@@ -18,6 +18,9 @@ const ROTATION_OFFSET: float = PI  # 180 degrees in radians
 # Exports
 # ========================================
 
+@export_group("Resources")
+@export var weapon_resource: WeaponResource
+
 @export_group("Settings")
 @export var acceleration: float = 1.0
 @export var friction: float = 5.0

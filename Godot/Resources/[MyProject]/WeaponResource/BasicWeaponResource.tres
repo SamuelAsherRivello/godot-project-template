@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="WeaponResource" load_steps=3 format=3 uid="uid://b8hm5nios60wf"]
+
+[ext_resource type="PackedScene" uid="uid://bendyamkunkhr" path="res://Scripts/Runtime/[MyProject]/Entities/Bullet.tscn" id="1_jf05h"]
+[ext_resource type="Script" uid="uid://de7cs5a4deo0c" path="res://Resources/[MyProject]/WeaponResource/WeaponResource.gd" id="1_yoxwf"]
+
+[resource]
+script = ExtResource("1_yoxwf")
+bullet_packed_scene = ExtResource("1_jf05h")
+metadata/_custom_type_script = "uid://de7cs5a4deo0c"
