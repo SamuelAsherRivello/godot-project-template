@@ -30,7 +30,8 @@ signal queue_free_completed()
 # Variables
 # ========================================
 
-var _is_animating_death: bool = false
+var _has_started_queue_free_animate: bool = false
+var _has_started_body_entered: bool = false
 
 # ========================================
 # Methods (DI)
@@ -41,10 +42,21 @@ var _is_animating_death: bool = false
 # ========================================
 
 func _ready() -> void:
+
+	# Enable contact monitoring for collisions
+	contact_monitor = true
+	max_contacts_reported = 1
+
+	# Play bullet sound
+	AudioManager.play_audio(GameConstants.AUDIO_POP01)
+
+	# Connect to collision signal
+	body_entered.connect(_on_body_entered)
+
 	pass
 
 func _process(_delta: float) -> void:
-	if _is_animating_death:
+	if _has_started_queue_free_animate:
 		return
 
 	if position.y < GameConstants.WORLD_BOTTOM_Y:
@@ -56,10 +68,14 @@ func _process(_delta: float) -> void:
 # ========================================
 
 func queue_free_animate() -> void:
-	if _is_animating_death:
+
+	if _has_started_queue_free_animate:
 		return
 
-	_is_animating_death = true
+	_has_started_queue_free_animate = true
+
+	# Play bullet sound
+	AudioManager.play_audio(GameConstants.AUDIO_COLLIDE01)
 
 	# Create a tween to shrink the bullet to 0 size over 0.1 seconds
 	var tween := create_tween()
@@ -69,3 +85,18 @@ func queue_free_animate() -> void:
 # ========================================
 # Event Handlers
 # ========================================
+
+func _on_body_entered(body: Node) -> void:
+
+	if _has_started_body_entered:
+			return
+
+	_has_started_body_entered = true
+
+	print("Bullet collided with: %s" % body.name)
+
+	# Play collision sound
+	AudioManager.play_audio(GameConstants.AUDIO_COLLIDE01)
+
+	# Optionally queue free the bullet after collision
+	# queue_free_animate()

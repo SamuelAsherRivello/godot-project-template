@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c7gfwd3jkij6r" path="res://Scripts/Runtime/[MyProject]/Views/GameView.tscn" id="3_2bspb"]
 [ext_resource type="Script" uid="uid://dks4jdanr477d" path="res://Scripts/Runtime/[MyProject]/Controllers/GameController.gd" id="4_s7dku"]
 [ext_resource type="PackedScene" uid="uid://c72waw0txbxl1" path="res://Scripts/Runtime/[MyProject]/Entities/PlayerCharacter.tscn" id="5_fxlpm"]
-[ext_resource type="PackedScene" uid="uid://blexvjuwwmjhi" path="res://Levels/Level01_Stone/Level01_Stone.tscn" id="6_a0aop"]
+[ext_resource type="PackedScene" path="res://Levels/Level01_Stone/Level01_Stone.tscn" id="6_a0aop"]
 
 [sub_resource type="Sky" id="Sky_c3lgb"]
 

@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 GDRx="*res://addons/reactivex/__gdrxsingleton__.gd"
 AutoloadCommonUtility="*res://Scripts/Runtime/Autoloads/CommonUtility.gd"
+AutoloadAudioManager="*res://Scripts/Runtime/Autoloads/AudioManager.gd"
 
 [dotnet]
 
