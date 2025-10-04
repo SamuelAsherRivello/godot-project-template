@@ -5,8 +5,8 @@
 # Class
 # ========================================
 
-class_name Screen02_Game
-extends BaseScreen
+class_name BaseScreen
+extends Node3D
 
 # ========================================
 # Constants

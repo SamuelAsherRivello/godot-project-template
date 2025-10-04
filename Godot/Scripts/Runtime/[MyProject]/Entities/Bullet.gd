@@ -4,6 +4,7 @@
 # ========================================
 # Class
 # ========================================
+
 class_name Bullet
 extends RigidBody3D
 
@@ -29,6 +30,8 @@ signal queue_free_completed()
 # Variables
 # ========================================
 
+# No variables to strongly type yet
+
 # ========================================
 # Methods (DI)
 # ========================================
@@ -38,13 +41,10 @@ signal queue_free_completed()
 # ========================================
 
 func _ready() -> void:
-
-	# print("%s._ready()" % get_script().get_global_name())
 	pass
 
 func _process(_delta: float) -> void:
 	if position.y < GameConstants.WORLD_BOTTOM_Y:
-		# print("%s position (y: %.2f). So destroying" % [get_script().get_global_name(), position.y])
 		queue_free_completed.emit()
 		queue_free()
 

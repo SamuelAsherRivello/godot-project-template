@@ -5,8 +5,8 @@
 # Class
 # ========================================
 
-extends Node3D
 class_name GameController
+extends Node3D
 
 # ========================================
 # Constants

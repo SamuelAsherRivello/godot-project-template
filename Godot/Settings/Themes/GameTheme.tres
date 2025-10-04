@@ -1,6 +1,6 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://sda5jgiceuo0"]
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://pjtqgwa56x42"]
 
-[ext_resource type="FontFile" uid="uid://cduxx7pgwwsq2" path="res://Art/Fonts/BebasNeue-Regular.ttf" id="1_g6a84"]
+[ext_resource type="FontFile" uid="uid://cqw4oq46nleqm" path="res://Art/Fonts/BebasNeue-Regular.ttf" id="1_g6a84"]
 
 [resource]
 RichTextLabel/colors/default_color = Color(0.9413647, 0.9413647, 0.94136465, 1)

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://civdcvtyaafhu"]
+
+[ext_resource type="Script" path="res://Scripts/Runtime/[MyProject]/Entities/Obstacle.gd" id="1_pdplw"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_yymsw"]
+
+[node name="Obstacle01" type="StaticBody3D"]
+script = ExtResource("1_pdplw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_yymsw")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]

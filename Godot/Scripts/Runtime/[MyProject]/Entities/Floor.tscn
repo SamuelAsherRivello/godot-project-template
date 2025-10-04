@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://nruhstweywvn"]
+[gd_scene load_steps=3]
 
-[ext_resource type="Material" uid="uid://nu7q0wt8s18l" path="res://Art/Materials/FloorMaterial.tres" id="1_cq0lu"]
+[ext_resource type="Material" path="res://Art/Materials/FloorMaterial.tres" id="1_cq0lu"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bbfpb"]
 size = Vector3(10, 0.5, 10)

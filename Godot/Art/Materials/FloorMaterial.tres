@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://nu7q0wt8s18l"]
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c15qiuxt5b82x"]
 
-[ext_resource type="Texture2D" uid="uid://5kvyfnesnfd2" path="res://addons/proto-csgs/textures/dark/texture_04.png" id="1_tkln7"]
+[ext_resource type="Texture2D" uid="uid://dxkxqj0tqx444" path="res://addons/proto-csgs/textures/dark/texture_04.png" id="1_tkln7"]
 
 [resource]
 albedo_color = Color(2.1682336, 2.1682336, 2.1682336, 1)

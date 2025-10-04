@@ -5,7 +5,7 @@
 # Class
 # ========================================
 
-class_name LevelBase
+class_name BaseLevel
 extends Node
 
 # ========================================

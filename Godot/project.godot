@@ -17,8 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-StaticCommonUtility="*res://Scripts/Runtime/Utilities/CommonUtility.gd"
 GDRx="*res://addons/reactivex/__gdrxsingleton__.gd"
+AutoloadCommonUtility="*res://Scripts/Runtime/Autoloads/CommonUtility.gd"
 
 [dotnet]
 
