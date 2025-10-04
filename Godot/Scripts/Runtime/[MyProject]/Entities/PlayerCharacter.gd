@@ -19,9 +19,6 @@ const ROTATION_OFFSET: float = PI  # 180 degrees in radians
 # Exports
 # ========================================
 
-@export_group("Resources")
-@export var weapon_resources: Array[WeaponResource] = []
-
 @export_group("Settings")
 @export var acceleration: float = 1.0
 @export var friction: float = 5.0
@@ -29,11 +26,16 @@ const ROTATION_OFFSET: float = PI  # 180 degrees in radians
 @export var move_speed_vector3: Vector3 = Vector3(5, 5, 5)
 @export var rotate_speed_vector3: Vector3 = Vector3(0.0, 1.0, 0.0)
 
+@export_group("Resources")
+@export var weapon_resources: Array[WeaponResource] = []
+
 # ========================================
 # Signals
 # ========================================
 
-signal bullet_instantiate_requested;
+signal shoot_bullet_requested;
+signal died;
+
 
 # ========================================
 # Properties
@@ -45,6 +47,7 @@ signal bullet_instantiate_requested;
 
 var _input_vector : Vector2 = Vector2.ZERO
 var _spawn_position: Vector3
+var _spawn_rotation: Vector3
 var _gameModel: GameModel
 var _weapon_resource_index: int = 0
 
@@ -69,6 +72,7 @@ func _inject(gameModel: GameModel) -> void:
 
 func _ready() -> void:
 	_spawn_position = global_position  # Cache spawn position
+	_spawn_rotation = global_transform.basis.get_euler()  # Cache spawn rotation
 	pass
 
 func _process(_delta: float) -> void:
@@ -102,7 +106,7 @@ func process_input() -> void:
 	if Input.is_action_pressed("ui_down"):
 		_input_vector.y += move_speed_vector3.y
 	if Input.is_action_pressed("ui_accept"):
-		bullet_instantiate_requested.emit()
+		shoot_bullet_requested.emit()
 		pass
 
 	# Weapon cycling with 1/2 keys
@@ -127,7 +131,7 @@ func process_movement(delta: float) -> void:
 
 	# Check for death by falling
 	if global_position.y < GameConstants.WORLD_BOTTOM_Y:
-		die()
+		died.emit();
 
 	# Apply gravity as acceleration
 	if not is_on_floor():
@@ -164,13 +168,10 @@ func process_movement(delta: float) -> void:
 	move_and_slide()
 	pass
 
-func die() -> void:
-	_gameModel.lives.Value -= 1
-	respawn()
-
 func respawn() -> void:
-	# Reset position and velocity
+	# Reset position, rotation, and velocity
 	global_position = _spawn_position
+	global_transform.basis = Basis.from_euler(_spawn_rotation)
 	velocity = Vector3.ZERO
 	pass
 

@@ -18,12 +18,12 @@ const INPUT_VECTOR_DEFAULT := Vector2.ZERO
 # Exports
 # ========================================
 
-@export_group("Nodes")
-@export var target_node_3D: Node3D
-
 @export_group("Settings")
 @export var move_speed_vector3: Vector3 = Vector3(5, 5, 5)
 @export var rotate_speed_vector3: Vector3 = Vector3(0.0, 1.0, 0.0)
+
+@export_group("Nodes")
+@export var target_node_3D: Node3D
 
 # ========================================
 # Signals

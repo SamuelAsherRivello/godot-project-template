@@ -50,10 +50,10 @@ fov = 23.3
 
 [node name="GameView" parent="." instance=ExtResource("3_2bspb")]
 
-[node name="GameController" type="Node3D" parent="." node_paths=PackedStringArray("playerCharacter", "gameView")]
+[node name="GameController" type="Node3D" parent="." node_paths=PackedStringArray("_playerCharacter", "_gameView")]
 script = ExtResource("4_s7dku")
-playerCharacter = NodePath("../PlayerCharacter")
-gameView = NodePath("../GameView")
+_playerCharacter = NodePath("../PlayerCharacter")
+_gameView = NodePath("../GameView")
 metadata/_custom_type_script = "uid://dks4jdanr477d"
 
 [node name="PlayerCharacter" parent="." instance=ExtResource("5_fxlpm")]

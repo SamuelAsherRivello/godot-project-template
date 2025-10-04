@@ -13,7 +13,8 @@ extends RefCounted
 # ========================================
 
 ## The lowest Y position in the game world, used for fall detection and boundaries
-static var WORLD_BOTTOM_Y: float = -10.0
+static var WORLD_BOTTOM_Y : float = -10.0
+static var GROUP_BULLETS : String = "GROUP_BULLETS"
 
 # ========================================
 # Exports
