@@ -28,6 +28,13 @@ project/assembly_name="Godot"
 
 enabled=PackedStringArray("res://addons/reactivex/plugin.cfg", "res://addons/simple_dependency_injection/plugin.cfg")
 
+[file_customization]
+
+folder_colors={
+"res://Levels/": "orange",
+"res://Scripts/": "yellow"
+}
+
 [input]
 
 ui_left={
