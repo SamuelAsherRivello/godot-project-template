@@ -18,8 +18,7 @@ extends Resource
 
 @export_group("Settings")
 @export var cooldown : float = 0.2
-@export var damage : float = 10
-@export var bullet_velocity: Vector2 = Vector2(8.0, 2.0)
+@export var bullet_velocity: Vector2 = Vector2(4.0, 2.0)
 
 @export_group("Nodes")
 @export var bullet_packed_scene: PackedScene

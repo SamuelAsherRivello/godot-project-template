@@ -1,0 +1,12 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://dxoq7m4rl2hse"]
+
+[ext_resource type="Shader" uid="uid://dtd4xhq7xu5xw" path="res://Art/Shaders/FlashShader/FlashShader.gdshader" id="1_qw711"]
+[ext_resource type="Texture2D" uid="uid://c0i86g1426yhv" path="res://addons/proto-csgs/textures/light/texture_08.png" id="2_i06bw"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_qw711")
+shader_parameter/albedo_texture = ExtResource("2_i06bw")
+shader_parameter/albedo_color = Color(1, 1, 1, 1)
+shader_parameter/flash_strength = 0.0
+shader_parameter/flash_color = Color(1, 0, 0, 1)

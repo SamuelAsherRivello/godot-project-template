@@ -1,9 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://d0k7gd574o2sd"]
+[gd_scene load_steps=5 format=3 uid="uid://d0k7gd574o2sd"]
 
 [ext_resource type="PackedScene" uid="uid://bendyamkunkhr" path="res://Scripts/Runtime/[MyProject]/Entities/Bullet/_Shared/BaseBullet.tscn" id="1_qorps"]
-[ext_resource type="Material" uid="uid://dgp8y3fujcxlu" path="res://Art/Materials/IceBulletMaterial.tres" id="2_6l4m0"]
+[ext_resource type="Shader" uid="uid://dtd4xhq7xu5xw" path="res://Art/Shaders/FlashShader/FlashShader.gdshader" id="2_6l4m0"]
+[ext_resource type="Texture2D" uid="uid://c0i86g1426yhv" path="res://addons/proto-csgs/textures/light/texture_08.png" id="3_2elx3"]
 
-[node name="BaseBullet" instance=ExtResource("1_qorps")]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i1riq"]
+render_priority = 0
+shader = ExtResource("2_6l4m0")
+shader_parameter/albedo_texture = ExtResource("3_2elx3")
+shader_parameter/albedo_color = Color(0, 0.81511116, 1.8247963, 1)
+shader_parameter/flash_strength = 0.0
+shader_parameter/flash_color = Color(1, 1, 1, 1)
 
-[node name="CSGSphere3D" parent="." index="1"]
-material = ExtResource("2_6l4m0")
+[node name="BaseBullet" node_paths=PackedStringArray("hitFlashMeshInstance3D") instance=ExtResource("1_qorps")]
+hitFlashMeshInstance3D = NodePath("HitFlashMeshInstance3D")
+
+[node name="HitFlashMeshInstance3D" parent="." index="1"]
+surface_material_override/0 = SubResource("ShaderMaterial_i1riq")

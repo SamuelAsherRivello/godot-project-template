@@ -1,9 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://djarndsuh31ym"]
+[gd_scene load_steps=5 format=3 uid="uid://djarndsuh31ym"]
 
 [ext_resource type="PackedScene" uid="uid://bendyamkunkhr" path="res://Scripts/Runtime/[MyProject]/Entities/Bullet/_Shared/BaseBullet.tscn" id="1_lv1uo"]
-[ext_resource type="Material" uid="uid://c4lx27cpv7ogo" path="res://Art/Materials/FireBulletMaterial.tres" id="2_yny3h"]
+[ext_resource type="Shader" uid="uid://dtd4xhq7xu5xw" path="res://Art/Shaders/FlashShader/FlashShader.gdshader" id="2_yny3h"]
 
-[node name="BaseBullet" instance=ExtResource("1_lv1uo")]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7pv7h"]
+load_path = "res://.godot/imported/texture_08.png-68c21b38a5d876920adc10324d3856ba.s3tc.ctex"
 
-[node name="CSGSphere3D" parent="." index="1"]
-material = ExtResource("2_yny3h")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6a2pr"]
+render_priority = 0
+shader = ExtResource("2_yny3h")
+shader_parameter/albedo_texture = SubResource("CompressedTexture2D_7pv7h")
+shader_parameter/albedo_color = Color(2.454227, 0, 0, 1)
+shader_parameter/flash_strength = 0.0
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/metallic = 0.0
+shader_parameter/roughness = 1.0
+shader_parameter/specular = 0.5
+
+[node name="BaseBullet" node_paths=PackedStringArray("hitFlashMeshInstance3D") instance=ExtResource("1_lv1uo")]
+hitFlashMeshInstance3D = NodePath("HitFlashMeshInstance3D")
+
+[node name="HitFlashMeshInstance3D" parent="." index="1"]
+surface_material_override/0 = SubResource("ShaderMaterial_6a2pr")

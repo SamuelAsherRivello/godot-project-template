@@ -15,6 +15,7 @@ extends RigidBody3D
 # ========================================
 # Exports
 # ========================================
+@export var hitFlashMeshInstance3D : HitFlashMeshInstance3D
 
 # ========================================
 # Signals
@@ -93,7 +94,7 @@ func _on_body_entered(body: Node) -> void:
 
 	_has_started_body_entered = true
 
-	print("Bullet collided with: %s" % body.name)
+	hitFlashMeshInstance3D.flash();
 
 	# Play collision sound
 	AudioManager.play_audio(GameConstants.AUDIO_COLLIDE01)

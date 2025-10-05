@@ -90,8 +90,8 @@ func _on_player_shoot_bullet_requested() -> void:
 		var player_forward: Vector3 = _playerCharacter.global_transform.basis.z
 
 		# Spawn bullet in front of player's face, offset by player's movement direction
-		var spawn_offset: float = 1.2  # Distance in front of player
-		var face_height: float = 0.5  # Height of face
+		var spawn_offset: float = .8  # Distance in front of player
+		var face_height: float = 0.4  # Height of face
 		var velocity_offset: Vector3 = _playerCharacter.velocity * 0.1  # Small offset based on player velocity
 		bullet.global_position = _playerCharacter.global_position + Vector3(0, face_height, 0) + player_forward * spawn_offset + velocity_offset
 
