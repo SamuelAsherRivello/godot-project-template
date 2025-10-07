@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Levels/_Shared/BaseLevel.gd" id="1_1a3r7"]
 [ext_resource type="PackedScene" uid="uid://nruhstweywvn" path="res://Scripts/Runtime/[MyProject]/Entities/Floor.tscn" id="1_6ge1u"]
-[ext_resource type="PackedScene" uid="uid://civdcvtyaafhu" path="res://Scripts/Runtime/[MyProject]/Entities/Obstacle.tscn" id="3_1a3r7"]
+[ext_resource type="PackedScene" uid="uid://cwercwr36ratw" path="res://Scripts/Runtime/[MyProject]/Entities/Obstacle.tscn" id="3_1a3r7"]
 
 [node name="Level" type="Node3D"]
 script = ExtResource("1_1a3r7")

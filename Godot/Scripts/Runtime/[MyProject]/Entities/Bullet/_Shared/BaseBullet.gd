@@ -6,7 +6,7 @@
 # ========================================
 
 class_name BaseBullet
-extends RigidBody3D
+extends IBullet
 
 # ========================================
 # Constants
@@ -15,13 +15,12 @@ extends RigidBody3D
 # ========================================
 # Exports
 # ========================================
+
 @export var hitFlashMeshInstance3D : HitFlashMeshInstance3D
 
 # ========================================
 # Signals
 # ========================================
-
-signal queue_free_completed()
 
 # ========================================
 # Properties
@@ -61,8 +60,7 @@ func _process(_delta: float) -> void:
 		return
 
 	if position.y < GameConstants.WORLD_BOTTOM_Y:
-		queue_free_completed.emit()
-		queue_free()
+		queue_free_and_emit()
 
 # ========================================
 # Methods (Custom)
@@ -87,10 +85,10 @@ func queue_free_animate() -> void:
 # Event Handlers
 # ========================================
 
-func _on_body_entered(body: Node) -> void:
+func _on_body_entered(_body: Node) -> void:
 
 	if _has_started_body_entered:
-			return
+		return
 
 	_has_started_body_entered = true
 

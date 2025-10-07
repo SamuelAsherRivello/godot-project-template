@@ -82,7 +82,7 @@ func _on_player_shoot_bullet_requested() -> void:
 	if active_weapon.can_shoot():
 
 		# Instantiate
-		var bullet := active_weapon.bullet_packed_scene.instantiate() as BaseBullet
+		var bullet : IBullet = active_weapon.bullet_packed_scene.instantiate() as IBullet
 		bullet.add_to_group(GameConstants.GROUP_BULLETS)
 		get_tree().current_scene.add_child(bullet)
 
