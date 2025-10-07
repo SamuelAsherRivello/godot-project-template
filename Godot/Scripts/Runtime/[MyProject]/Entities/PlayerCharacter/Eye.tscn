@@ -1,14 +1,49 @@
-[gd_scene load_steps=6 format=3 uid="uid://df182i2a08wjn"]
+[gd_scene load_steps=10 format=3 uid="uid://df182i2a08wjn"]
 
 [ext_resource type="PackedScene" uid="uid://dxw7cledbpiia" path="res://addons/proto-csgs/proto_csg_box_3d.tscn" id="1_n47x8"]
 [ext_resource type="Texture2D" uid="uid://dc0h0oa5uuxvx" path="res://addons/proto-csgs/textures/dark/texture_02.png" id="2_n47x8"]
 [ext_resource type="Texture2D" uid="uid://c4j2nn0114vun" path="res://addons/proto-csgs/textures/purple/texture_13.png" id="3_80mjb"]
+[ext_resource type="Script" uid="uid://dovnn50fcs7v3" path="res://Scripts/Runtime/[MyProject]/Entities/PlayerCharacter/EyeBlinkAnimationPlayer.gd" id="3_t8jx1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_80mjb"]
 resource_local_to_scene = true
 albedo_texture = ExtResource("2_n47x8")
 uv1_offset = Vector3(0.5, 0.5, 0.5)
 uv1_triplanar = true
+
+[sub_resource type="Animation" id="Animation_80mjb"]
+resource_name = "EyeBlinkAnimation"
+length = 0.5
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pupil")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 0.23333335, 1, 0, 0, 0.05, 0.5, 1, 0, 0, 0)
+tracks/1/type = "scale_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pupil")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 1, 1, 1, 0.23333335, 1, 1.5, 1.5, 1.5, 0.5, 1, 1, 1, 1)
+
+[sub_resource type="Animation" id="Animation_t8jx1"]
+length = 0.001
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pupil")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n3bys"]
+_data = {
+&"EyeBlinkAnimation": SubResource("Animation_80mjb"),
+&"RESET": SubResource("Animation_t8jx1")
+}
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t8jx1"]
 resource_local_to_scene = true
@@ -21,8 +56,14 @@ size = Vector3(0.2, 0.2, 0.2)
 material = SubResource("StandardMaterial3D_80mjb")
 block_style = 1
 
-[node name="ProtoCSGBox3D" parent="." index="1" instance=ExtResource("1_n47x8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0034459364, -0.014246853, 0.06634534)
-size = Vector3(0.123364255, 0.10292969, 0.1)
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0"]
+reset_on_save = false
+libraries = {
+&"": SubResource("AnimationLibrary_n3bys")
+}
+script = ExtResource("3_t8jx1")
+
+[node name="Pupil" parent="." index="2" instance=ExtResource("1_n47x8")]
+size = Vector3(0.123364255, 0.10292969, 0.26691896)
 material = SubResource("StandardMaterial3D_t8jx1")
 block_color = 4
