@@ -1,15 +1,24 @@
-[gd_scene load_steps=3]
+[gd_scene load_steps=5 format=3 uid="uid://nruhstweywvn"]
 
-[ext_resource type="Material" path="res://Art/Materials/FloorMaterial.tres" id="1_cq0lu"]
+[ext_resource type="PackedScene" uid="uid://dxw7cledbpiia" path="res://addons/proto-csgs/proto_csg_box_3d.tscn" id="1_y247d"]
+[ext_resource type="Texture2D" uid="uid://0qrx1xwcocqp" path="res://addons/proto-csgs/textures/dark/texture_05.png" id="2_y247d"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ht64d"]
+resource_local_to_scene = true
+albedo_texture = ExtResource("2_y247d")
+uv1_offset = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bbfpb"]
 size = Vector3(10, 0.5, 10)
 
 [node name="Floor" type="StaticBody3D"]
 
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
+[node name="ProtoCSGBox3D" parent="." instance=ExtResource("1_y247d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0047314167, 0)
 size = Vector3(10, 0.5, 10)
-material = ExtResource("1_cq0lu")
+material = SubResource("StandardMaterial3D_ht64d")
+block_style = 4
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_bbfpb")

@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://df182i2a08wjn"]
+
+[ext_resource type="PackedScene" uid="uid://dxw7cledbpiia" path="res://addons/proto-csgs/proto_csg_box_3d.tscn" id="1_n47x8"]
+[ext_resource type="Texture2D" uid="uid://dc0h0oa5uuxvx" path="res://addons/proto-csgs/textures/dark/texture_02.png" id="2_n47x8"]
+[ext_resource type="Texture2D" uid="uid://c4j2nn0114vun" path="res://addons/proto-csgs/textures/purple/texture_13.png" id="3_80mjb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_80mjb"]
+resource_local_to_scene = true
+albedo_texture = ExtResource("2_n47x8")
+uv1_offset = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t8jx1"]
+resource_local_to_scene = true
+albedo_texture = ExtResource("3_80mjb")
+uv1_offset = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+
+[node name="Eye" instance=ExtResource("1_n47x8")]
+size = Vector3(0.2, 0.2, 0.2)
+material = SubResource("StandardMaterial3D_80mjb")
+block_style = 1
+
+[node name="ProtoCSGBox3D" parent="." index="1" instance=ExtResource("1_n47x8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0034459364, -0.014246853, 0.06634534)
+size = Vector3(0.123364255, 0.10292969, 0.1)
+material = SubResource("StandardMaterial3D_t8jx1")
+block_color = 4
