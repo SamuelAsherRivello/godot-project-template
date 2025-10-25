@@ -1,22 +1,16 @@
-[gd_scene load_steps=11 format=3 uid="uid://c72waw0txbxl1"]
+[gd_scene load_steps=10 format=3 uid="uid://c72waw0txbxl1"]
 
-[ext_resource type="Script" uid="uid://bcig2f8j0nud3" path="res://Scripts/Runtime/[MyProject]/Entities/PlayerCharacter.gd" id="1_v0eh8"]
+[ext_resource type="Script" uid="uid://bcig2f8j0nud3" path="res://Scripts/Runtime/[MyProject]/Constructs/Entities/PlayerCharacter/PlayerCharacter.gd" id="1_v0eh8"]
 [ext_resource type="Script" uid="uid://de7cs5a4deo0c" path="res://Resources/[MyProject]/WeaponResource/WeaponResource.gd" id="2_lb3l8"]
 [ext_resource type="Resource" path="res://Resources/[MyProject]/WeaponResource/FireWeaponResource.tres" id="2_mb5ng"]
 [ext_resource type="Material" uid="uid://dnmjsxbdcqkqb" path="res://Art/Materials/PlayerMaterial.tres" id="2_twgl0"]
 [ext_resource type="Resource" path="res://Resources/[MyProject]/WeaponResource/IceWeaponResource.tres" id="3_mkkp8"]
 [ext_resource type="Texture2D" uid="uid://cej3yoosomfd2" path="res://addons/proto-csgs/textures/dark/texture_13.png" id="7_c4fe5"]
-[ext_resource type="PackedScene" uid="uid://df182i2a08wjn" path="res://Scripts/Runtime/[MyProject]/Entities/PlayerCharacter/Eye.tscn" id="7_qd4nk"]
+[ext_resource type="PackedScene" uid="uid://df182i2a08wjn" path="res://Scripts/Runtime/[MyProject]/Constructs/Entities/PlayerCharacter/Eye.tscn" id="7_qd4nk"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lg2j6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mkkp8"]
-resource_local_to_scene = true
-albedo_texture = ExtResource("7_c4fe5")
-uv1_offset = Vector3(0.5, 0.5, 0.5)
-uv1_triplanar = true
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qd4nk"]
 resource_local_to_scene = true
 albedo_texture = ExtResource("7_c4fe5")
 uv1_offset = Vector3(0.5, 0.5, 0.5)
@@ -31,6 +25,7 @@ weapon_resources = Array[ExtResource("2_lb3l8")]([ExtResource("3_mkkp8"), ExtRes
 shape = SubResource("BoxShape3D_lg2j6")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CollisionShape3D"]
+transform = Transform3D(0.99998444, -0.0055850246, 0, 0.0055850246, 0.99998444, 0, 0, 0, 1, 0, 0, 0)
 material = ExtResource("2_twgl0")
 
 [node name="Eye2" parent="CollisionShape3D/CSGBox3D" instance=ExtResource("7_qd4nk")]
@@ -39,6 +34,6 @@ size = Vector3(0.3617676, 0.33588868, 0.2)
 material = SubResource("StandardMaterial3D_mkkp8")
 
 [node name="Eye3" parent="CollisionShape3D/CSGBox3D" instance=ExtResource("7_qd4nk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2372711, 0.2690912, 0.44583458)
+transform = Transform3D(0.9999999, 4.656613e-10, 0, -4.656613e-10, 0.9999999, 0, 0, 0, 1, -0.19672996, 0.27158812, 0.44583458)
 size = Vector3(0.3617676, 0.33588868, 0.2)
-material = SubResource("StandardMaterial3D_qd4nk")
+material = SubResource("StandardMaterial3D_mkkp8")

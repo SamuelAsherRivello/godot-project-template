@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://cruwicjsr2e6i"]
+
+[ext_resource type="Script" uid="uid://d2eaqbfwh4hxq" path="res://Scripts/Runtime/[MyProject]/Constructs/Screens/_Shared/BaseScreen.gd" id="1_6f5ef"]
+[ext_resource type="PackedScene" uid="uid://dlcuqh3ysho3a" path="res://Scripts/Runtime/[MyProject]/Constructs/Screens/_Shared/Common.tscn" id="2_e3n3i"]
+[ext_resource type="PackedScene" uid="uid://cr8kynrf7w8jr" path="res://Scripts/Runtime/[MyProject]/Constructs/Screens/Screen01_StartMenu/Views/StartMenuView.tscn" id="3_6f5ef"]
+
+[node name="Screen" type="Node3D"]
+script = ExtResource("1_6f5ef")
+
+[node name="Common" parent="." instance=ExtResource("2_e3n3i")]
+
+[node name="StartMenuView" parent="." instance=ExtResource("3_6f5ef")]

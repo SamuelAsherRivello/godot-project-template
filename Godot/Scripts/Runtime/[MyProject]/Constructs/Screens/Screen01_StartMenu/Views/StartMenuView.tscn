@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://cr8kynrf7w8jr"]
+
+[ext_resource type="Script" path="res://Scripts/Runtime/[MyProject]/Constructs/Screens/Screen01_StartMenu/Views/StartMenuView.gd" id="1_qjhre"]
+[ext_resource type="Texture2D" uid="uid://dpaoxbaukd6fg" path="res://icon.svg" id="2_fn8b3"]
+[ext_resource type="PackedScene" uid="uid://c84hc8f620ovx" path="res://Scripts/Runtime/[MyProject]/Constructs/Screens/Screen02_Game/Screen02_Game.tscn" id="2_rfcff"]
+[ext_resource type="Theme" uid="uid://pjtqgwa56x42" path="res://Settings/Themes/GameTheme.tres" id="3_rfcff"]
+
+[node name="StartMenuView" type="CanvasLayer" node_paths=PackedStringArray("play_game_button")]
+script = ExtResource("1_qjhre")
+play_game_button = NodePath("Control/PlayGameButton")
+scene_to_load = ExtResource("2_rfcff")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Logo" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -63.0
+offset_top = 97.0
+offset_right = 65.0
+offset_bottom = 225.0
+grow_horizontal = 2
+texture = ExtResource("2_fn8b3")
+
+[node name="PlayGameButton" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -236.0
+offset_top = -38.5
+offset_right = 236.0
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_rfcff")
+text = "Play Game"

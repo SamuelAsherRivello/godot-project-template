@@ -1,0 +1,26 @@
+[gd_scene load_steps=7 format=3 uid="uid://c84hc8f620ovx"]
+
+[ext_resource type="Script" uid="uid://d2eaqbfwh4hxq" path="res://Scripts/Runtime/[MyProject]/Constructs/Screens/Screen02_Game/Screen02_Game.gd" id="1_tbbmx"]
+[ext_resource type="PackedScene" uid="uid://dlcuqh3ysho3a" path="res://Scripts/Runtime/[MyProject]/Constructs/Screens/_Shared/Common.tscn" id="2_tbbmx"]
+[ext_resource type="PackedScene" uid="uid://c7gfwd3jkij6r" path="res://Scripts/Runtime/[MyProject]/Constructs/Screens/Screen02_Game/Views/GameView.tscn" id="3_sj1pl"]
+[ext_resource type="Script" uid="uid://dks4jdanr477d" path="res://Scripts/Runtime/[MyProject]/Controllers/GameController.gd" id="4_5xtjc"]
+[ext_resource type="PackedScene" uid="uid://c72waw0txbxl1" path="res://Scripts/Runtime/[MyProject]/Constructs/Entities/PlayerCharacter/PlayerCharacter.tscn" id="5_2fq7x"]
+[ext_resource type="PackedScene" uid="uid://blexvjuwwmjhi" path="res://Scripts/Runtime/[MyProject]/Constructs/Levels/Level01_Stone/Level01_Stone.tscn" id="6_vafee"]
+
+[node name="Screen" type="Node3D"]
+script = ExtResource("1_tbbmx")
+
+[node name="Common" parent="." instance=ExtResource("2_tbbmx")]
+
+[node name="GameView" parent="." instance=ExtResource("3_sj1pl")]
+
+[node name="GameController" type="Node3D" parent="." node_paths=PackedStringArray("_playerCharacter", "_gameView")]
+script = ExtResource("4_5xtjc")
+_playerCharacter = NodePath("../PlayerCharacter")
+_gameView = NodePath("../GameView")
+metadata/_custom_type_script = "uid://dks4jdanr477d"
+
+[node name="PlayerCharacter" parent="." instance=ExtResource("5_2fq7x")]
+
+[node name="Level" parent="." instance=ExtResource("6_vafee")]
+script = null

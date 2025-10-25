@@ -3,6 +3,7 @@
 [ext_resource type="FontFile" uid="uid://cqw4oq46nleqm" path="res://Art/Fonts/BebasNeue-Regular.ttf" id="1_g6a84"]
 
 [resource]
+Button/font_sizes/font_size = 50
 RichTextLabel/colors/default_color = Color(0.9413647, 0.9413647, 0.94136465, 1)
 RichTextLabel/colors/font_shadow_color = Color(0, 0, 0, 0.50980395)
 RichTextLabel/constants/shadow_offset_x = 1

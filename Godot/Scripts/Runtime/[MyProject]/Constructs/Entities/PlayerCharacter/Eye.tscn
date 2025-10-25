@@ -1,13 +1,13 @@
 [gd_scene load_steps=10 format=3 uid="uid://df182i2a08wjn"]
 
 [ext_resource type="PackedScene" uid="uid://dxw7cledbpiia" path="res://addons/proto-csgs/proto_csg_box_3d.tscn" id="1_n47x8"]
-[ext_resource type="Texture2D" uid="uid://dc0h0oa5uuxvx" path="res://addons/proto-csgs/textures/dark/texture_02.png" id="2_n47x8"]
+[ext_resource type="Texture2D" uid="uid://0qrx1xwcocqp" path="res://addons/proto-csgs/textures/dark/texture_05.png" id="2_o3vjj"]
 [ext_resource type="Texture2D" uid="uid://c4j2nn0114vun" path="res://addons/proto-csgs/textures/purple/texture_13.png" id="3_80mjb"]
-[ext_resource type="Script" uid="uid://dovnn50fcs7v3" path="res://Scripts/Runtime/[MyProject]/Entities/PlayerCharacter/EyeBlinkAnimationPlayer.gd" id="3_t8jx1"]
+[ext_resource type="Script" uid="uid://dovnn50fcs7v3" path="res://Scripts/Runtime/[MyProject]/Constructs/Entities/PlayerCharacter/EyeBlinkAnimationPlayer.gd" id="3_t8jx1"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_80mjb"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xxau7"]
 resource_local_to_scene = true
-albedo_texture = ExtResource("2_n47x8")
+albedo_texture = ExtResource("2_o3vjj")
 uv1_offset = Vector3(0.5, 0.5, 0.5)
 uv1_triplanar = true
 
@@ -53,8 +53,8 @@ uv1_triplanar = true
 
 [node name="Eye" instance=ExtResource("1_n47x8")]
 size = Vector3(0.2, 0.2, 0.2)
-material = SubResource("StandardMaterial3D_80mjb")
-block_style = 1
+material = SubResource("StandardMaterial3D_xxau7")
+block_style = 4
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0"]
 reset_on_save = false

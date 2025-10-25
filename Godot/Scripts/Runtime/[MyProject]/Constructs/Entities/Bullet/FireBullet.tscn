@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://djarndsuh31ym"]
 
-[ext_resource type="PackedScene" uid="uid://bendyamkunkhr" path="res://Scripts/Runtime/[MyProject]/Entities/Bullet/_Shared/BaseBullet.tscn" id="1_lv1uo"]
+[ext_resource type="PackedScene" uid="uid://bendyamkunkhr" path="res://Scripts/Runtime/[MyProject]/Constructs/Entities/Bullet/_Shared/BaseBullet.tscn" id="1_lv1uo"]
 [ext_resource type="Shader" uid="uid://dtd4xhq7xu5xw" path="res://Art/Shaders/FlashShader/FlashShader.gdshader" id="2_yny3h"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7pv7h"]

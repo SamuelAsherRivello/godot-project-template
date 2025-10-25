@@ -6,7 +6,7 @@
 # ========================================
 
 class_name BaseLevel
-extends Node
+extends Node3D
 
 # ========================================
 # Constants

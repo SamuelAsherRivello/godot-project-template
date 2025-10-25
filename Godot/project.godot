@@ -11,15 +11,15 @@ config_version=5
 [application]
 
 config/name="Godot"
-run/main_scene="uid://c4p760k7oplg1"
+run/main_scene="uid://cruwicjsr2e6i"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 GDRx="*res://addons/reactivex/__gdrxsingleton__.gd"
-AutoloadCommonUtility="*res://Scripts/Runtime/Autoloads/CommonUtility.gd"
-AutoloadAudioManager="*res://Scripts/Runtime/Autoloads/AudioManager.gd"
+AutoloadCommonUtility="*res://Scripts/Runtime/[MyProject]/Autoloads/CommonUtility.gd"
+AutoloadAudioManager="*res://Scripts/Runtime/[MyProject]/Autoloads/AudioManager.gd"
 
 [dotnet]
 
@@ -32,8 +32,11 @@ enabled=PackedStringArray("res://addons/RandomizeLevelTool/plugin.cfg", "res://a
 [file_customization]
 
 folder_colors={
-"res://Levels/": "orange",
-"res://Scripts/": "yellow"
+"res://Scripts/": "yellow",
+"res://Scripts/Runtime/[MyProject]/Constructs/": "orange",
+"res://Scripts/Runtime/[MyProject]/Constructs/Entities/": "purple",
+"res://Scripts/Runtime/[MyProject]/Constructs/Levels/": "green",
+"res://Scripts/Runtime/[MyProject]/Constructs/Screens/": "blue"
 }
 
 [input]

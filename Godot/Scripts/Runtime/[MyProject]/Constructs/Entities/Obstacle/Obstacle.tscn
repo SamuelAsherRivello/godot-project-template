@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cwercwr36ratw"]
 
-[ext_resource type="Script" path="res://Scripts/Runtime/[MyProject]/Entities/Obstacle.gd" id="1_pdplw"]
+[ext_resource type="Script" uid="uid://dmae11xdut4xa" path="res://Scripts/Runtime/[MyProject]/Constructs/Entities/Obstacle/Obstacle.gd" id="1_pdplw"]
 [ext_resource type="PackedScene" uid="uid://dilcl7aco8lba" path="res://addons/proto-csgs/proto_csg_cylinder_3d.tscn" id="2_yymsw"]
 [ext_resource type="Texture2D" uid="uid://dcdrmf022o3m3" path="res://addons/proto-csgs/textures/green/texture_08.png" id="3_wj5nb"]
 

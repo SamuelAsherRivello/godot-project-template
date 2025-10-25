@@ -29,4 +29,6 @@
 
 # Backup files
 /[Gg]odot/*.godot.save
-/Godot/Builds
+
+# Builds
+/[Bb]uilds/

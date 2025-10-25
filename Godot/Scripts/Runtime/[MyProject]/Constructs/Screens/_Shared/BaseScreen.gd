@@ -5,8 +5,8 @@
 # Class
 # ========================================
 
-class_name GameModel
-extends Node
+class_name BaseScreen
+extends Node3D
 
 # ========================================
 # Constants
@@ -24,11 +24,6 @@ extends Node
 # Properties
 # ========================================
 
-var instructions = ReactiveProperty.new("Keys: WASD,Space,1,2,Esc")
-var level = ReactiveProperty.new(1)
-var lives = ReactiveProperty.new(3)
-var score = ReactiveProperty.new(0)
-
 # ========================================
 # Variables
 # ========================================
@@ -37,10 +32,14 @@ var score = ReactiveProperty.new(0)
 # Methods (Godot)
 # ========================================
 
-func _init() -> void:
+func _ready() -> void:
 
-	print("%s._init()" % get_script().get_global_name())
+	print("%s._ready()" % get_script().get_global_name())
 	pass
+
+func _input(event: InputEvent) -> void:
+	if event is InputEventKey and event.pressed and event.keycode == KEY_ESCAPE:
+		get_tree().quit()
 
 # ========================================
 # Methods (Custom)

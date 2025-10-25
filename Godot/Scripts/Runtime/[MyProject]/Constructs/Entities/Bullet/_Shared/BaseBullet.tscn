@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://bendyamkunkhr"]
 
-[ext_resource type="Script" uid="uid://bpj10tce5305c" path="res://Scripts/Runtime/[MyProject]/Entities/Bullet/_Shared/BaseBullet.gd" id="1_oijxu"]
+[ext_resource type="Script" uid="uid://bpj10tce5305c" path="res://Scripts/Runtime/[MyProject]/Constructs/Entities/Bullet/_Shared/BaseBullet.gd" id="1_oijxu"]
 [ext_resource type="Shader" uid="uid://dtd4xhq7xu5xw" path="res://Art/Shaders/FlashShader/FlashShader.gdshader" id="2_jcwgv"]
-[ext_resource type="Script" uid="uid://bv7dx8bn46wk4" path="res://Art/Shaders/FlashShader/HitFlashMeshInstance3D.gd" id="3_7pv7h"]
+[ext_resource type="Script" path="res://Art/Shaders/FlashShader/HitFlashMeshInstance3D.gd" id="3_7pv7h"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5a4no"]
 bounce = 0.04

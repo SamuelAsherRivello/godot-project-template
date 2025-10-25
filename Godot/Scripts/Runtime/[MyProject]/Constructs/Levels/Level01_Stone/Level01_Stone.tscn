@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://blexvjuwwmjhi"]
+
+[ext_resource type="PackedScene" uid="uid://nruhstweywvn" path="res://Scripts/Runtime/[MyProject]/Constructs/Entities/Floor.tscn" id="1_6ge1u"]
+[ext_resource type="Script" uid="uid://d2eaqbfwh4hxq" path="res://Scripts/Runtime/[MyProject]/Constructs/Screens/Screen02_Game/Screen02_Game.gd" id="1_bc5g1"]
+[ext_resource type="PackedScene" uid="uid://cwercwr36ratw" path="res://Scripts/Runtime/[MyProject]/Constructs/Entities/Obstacle/Obstacle.tscn" id="3_1a3r7"]
+
+[node name="Level" type="Node3D"]
+script = ExtResource("1_bc5g1")
+
+[node name="Floor" parent="." instance=ExtResource("1_6ge1u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.75, 0)
+
+[node name="Obstacles" type="Node3D" parent="."]
+
+[node name="Obstacle01" parent="Obstacles" instance=ExtResource("3_1a3r7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+script = null
