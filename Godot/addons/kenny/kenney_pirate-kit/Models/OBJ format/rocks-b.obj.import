@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dym355513t262"
+path="res://.godot/imported/rocks-b.obj-08181ace4261f4640ac416324d2c0297.mesh"
+
+[deps]
+
+files=["res://.godot/imported/rocks-b.obj-08181ace4261f4640ac416324d2c0297.mesh"]
+
+source_file="res://addons/kenny/kenney_pirate-kit/Models/OBJ format/rocks-b.obj"
+dest_files=["res://.godot/imported/rocks-b.obj-08181ace4261f4640ac416324d2c0297.mesh", "res://.godot/imported/rocks-b.obj-08181ace4261f4640ac416324d2c0297.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

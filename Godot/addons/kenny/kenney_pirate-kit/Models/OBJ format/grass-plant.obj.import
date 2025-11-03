@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://gvh3qnsow7u"
+path="res://.godot/imported/grass-plant.obj-3241d4de9a085889e669b1d78fc76701.mesh"
+
+[deps]
+
+files=["res://.godot/imported/grass-plant.obj-3241d4de9a085889e669b1d78fc76701.mesh"]
+
+source_file="res://addons/kenny/kenney_pirate-kit/Models/OBJ format/grass-plant.obj"
+dest_files=["res://.godot/imported/grass-plant.obj-3241d4de9a085889e669b1d78fc76701.mesh", "res://.godot/imported/grass-plant.obj-3241d4de9a085889e669b1d78fc76701.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

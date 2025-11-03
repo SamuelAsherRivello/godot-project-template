@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://caxb5mf37y57b"
+path="res://.godot/imported/tool-paddle.obj-ecc7ce23c50ec033aa4762be3024141b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/tool-paddle.obj-ecc7ce23c50ec033aa4762be3024141b.mesh"]
+
+source_file="res://addons/kenny/kenney_pirate-kit/Models/OBJ format/tool-paddle.obj"
+dest_files=["res://.godot/imported/tool-paddle.obj-ecc7ce23c50ec033aa4762be3024141b.mesh", "res://.godot/imported/tool-paddle.obj-ecc7ce23c50ec033aa4762be3024141b.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

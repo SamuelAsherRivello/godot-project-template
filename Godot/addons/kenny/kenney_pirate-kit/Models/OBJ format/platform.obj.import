@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ck7cw51wmp1rf"
+path="res://.godot/imported/platform.obj-eaf6de85c0269c62a2769379a27dae71.mesh"
+
+[deps]
+
+files=["res://.godot/imported/platform.obj-eaf6de85c0269c62a2769379a27dae71.mesh"]
+
+source_file="res://addons/kenny/kenney_pirate-kit/Models/OBJ format/platform.obj"
+dest_files=["res://.godot/imported/platform.obj-eaf6de85c0269c62a2769379a27dae71.mesh", "res://.godot/imported/platform.obj-eaf6de85c0269c62a2769379a27dae71.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

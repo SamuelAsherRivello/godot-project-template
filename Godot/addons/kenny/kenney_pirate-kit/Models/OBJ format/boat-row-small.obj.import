@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://coq18kxvsj7vg"
+path="res://.godot/imported/boat-row-small.obj-b227f9ed6bb1126a0fad1673af23658a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/boat-row-small.obj-b227f9ed6bb1126a0fad1673af23658a.mesh"]
+
+source_file="res://addons/kenny/kenney_pirate-kit/Models/OBJ format/boat-row-small.obj"
+dest_files=["res://.godot/imported/boat-row-small.obj-b227f9ed6bb1126a0fad1673af23658a.mesh", "res://.godot/imported/boat-row-small.obj-b227f9ed6bb1126a0fad1673af23658a.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://pxtvxaclbidn"
+path="res://.godot/imported/palm-bend.obj-8bb57a2a2444ee7d9a62707fb0952dc2.mesh"
+
+[deps]
+
+files=["res://.godot/imported/palm-bend.obj-8bb57a2a2444ee7d9a62707fb0952dc2.mesh"]
+
+source_file="res://addons/kenny/kenney_pirate-kit/Models/OBJ format/palm-bend.obj"
+dest_files=["res://.godot/imported/palm-bend.obj-8bb57a2a2444ee7d9a62707fb0952dc2.mesh", "res://.godot/imported/palm-bend.obj-8bb57a2a2444ee7d9a62707fb0952dc2.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

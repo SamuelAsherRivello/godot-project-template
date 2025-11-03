@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://vtae2qtjgy18"
+path="res://.godot/imported/cannon-mobile.obj-0eeb6a81e34dc7be0f75dbc3c6ba3eaf.mesh"
+
+[deps]
+
+files=["res://.godot/imported/cannon-mobile.obj-0eeb6a81e34dc7be0f75dbc3c6ba3eaf.mesh"]
+
+source_file="res://addons/kenny/kenney_pirate-kit/Models/OBJ format/cannon-mobile.obj"
+dest_files=["res://.godot/imported/cannon-mobile.obj-0eeb6a81e34dc7be0f75dbc3c6ba3eaf.mesh", "res://.godot/imported/cannon-mobile.obj-0eeb6a81e34dc7be0f75dbc3c6ba3eaf.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
