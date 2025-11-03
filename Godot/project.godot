@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Godot"
-run/main_scene="uid://cruwicjsr2e6i"
+run/main_scene="uid://bag4ldnve6kny"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -36,7 +36,8 @@ folder_colors={
 "res://Scripts/Runtime/[MyProject]/Constructs/": "orange",
 "res://Scripts/Runtime/[MyProject]/Constructs/Entities/": "purple",
 "res://Scripts/Runtime/[MyProject]/Constructs/Levels/": "green",
-"res://Scripts/Runtime/[MyProject]/Constructs/Screens/": "blue"
+"res://Scripts/Runtime/[MyProject]/Constructs/Screens/": "blue",
+"res://Scripts/Runtime/[MyProject]/Constructs/Screens/Screen02_Pirates/": "pink"
 }
 
 [input]

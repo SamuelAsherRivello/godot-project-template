@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://sxgpb5l1x35f"]
+
+[ext_resource type="Script" uid="uid://duh3wyp3q2pkh" path="res://Scripts/Runtime/[MyProject]/Constructs/Screens/Screen02_Pirates/PlayerShip.gd" id="1_0cimv"]
+[ext_resource type="PackedScene" uid="uid://b63dx2hbe760v" path="res://addons/kenny/kenney_pirate-kit/Models/GLB format/ship-pirate-small.glb" id="1_1jnap"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5a8n7"]
+size = Vector3(4.5637207, 10.261169, 8.981812)
+
+[node name="PlayerShip" type="CharacterBody3D" node_paths=PackedStringArray("navigationAgent3D")]
+script = ExtResource("1_0cimv")
+navigationAgent3D = NodePath("NavigationAgent3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21862793, 4.6305847, 0.7966919)
+shape = SubResource("BoxShape3D_5a8n7")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+
+[node name="Models" type="Node3D" parent="."]
+
+[node name="ship-pirate-small2" parent="Models" instance=ExtResource("1_1jnap")]
